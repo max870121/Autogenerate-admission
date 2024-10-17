@@ -30,9 +30,10 @@
 
 
 <!-- PROJECT LOGO -->
-  <h3 align="center">自動產生查房筆記</h3>
+  <h3 align="center">自動產生入院病歷</h3>
   <p align="center">
-    自動抓取資料並產生查房筆記
+    自動抓取資料並產生入院病歷
+    (尚未完成)
   </p>
 </div>
 
@@ -69,11 +70,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-網路爬蟲可以自動爬取資料，並生成word 的查房摘要
-如果需要執行檔請使用連結:[執行檔連結](https://drive.google.com/file/d/1ZkFQZ3x7qsEzjbEPP_co_DxcQM1SW02S/view?usp=sharing)
+網路爬蟲可以自動爬取資料，並自動生成暫時存檔的住院病摘
 
 ***注意***
-如果病人太多，可能會使資訊室擋IP，導致該電腦暫時無法登入系統，請重新開機過一會再試試
+如果資料太多，可能會使資訊室擋IP，導致該電腦暫時無法登入系統，請重新開機過一會再試試
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -115,8 +115,8 @@ To get a local copy up and running follow these simple example steps.
 
 1. 打帳號
 2. 打密碼
-3. 打需要產生摘要的醫師燈號 (4碼)
-4. 會在相同的資料夾產生 醫師燈號.docx
+3. 打需要產生摘要的病歷號
+4. 會自動暫存
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -124,11 +124,12 @@ To get a local copy up and running follow these simple example steps.
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Make table
-- [ ] Auto generate admission note
+- [x] Get ER note
+- [ ] Auto generate prompt
+- [ ] Give prompt to ChatGPT
+- [ ] Fill in the admission note
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- CONTRIBUTING -->
