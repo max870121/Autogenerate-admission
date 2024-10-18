@@ -55,11 +55,32 @@ soup = BeautifulSoup(driver.page_source, 'html.parser')
 
 
 
-patID=input("病歷號")
+patID=input("病歷號:")
 
-from getERnote import *
+prompt_text=""
+
+with open("admission prompt.txt", 'w',encoding="utf-8") as f:
+	prompt_text=prompt_text+f.read()
+
 ER_note=get_ER(driver, patID)
-print(ER_note)
+
+prompt_text=prompt_text+ER_note+"\n"
+prompt_text=prompt_text+"-----------------------------------------------------------------------------------\n"
+
+
+time.sleep(3*random.random())
+report_num=5
+report_name,recent_report=get_recent_report(driver, patID, report_num=report_num)
+for i in range(report_num):
+	prompt_text=prompt_text+report_name[i]+"\n"
+	prompt_text=prompt_text+recent_report[report_name[i]].to_string()
+	prompt_text=prompt_text+"\n-----------------------------------------------------------------------------------\n"
+print(prompt_text)
+
+path="prompt.txt"
+with open(path, 'w',encoding="utf-8") as f:
+	f.write(prompt_text)
+driver.quit()
 
 # def set_paragraph_spacing(doc, spacing=0):
 #     """Set paragraph spacing for all paragraphs in the document."""
@@ -283,5 +304,4 @@ print(ER_note)
 # doc.save(docID+'.docx')
 # print("儲存為"+docID+'.docx')
 
-driver.quit()
 

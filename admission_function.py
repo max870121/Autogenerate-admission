@@ -269,17 +269,17 @@ def get_recent_report(driver, ID, report_num=3):
         Report_name=report.text
         print(Report_name)
         report_name_list.append(Report_name)
-        # report_url=report["href"]
-        # time.sleep(random.random()*2)
-        # driver.get(root_url+report_url)
+        report_url=report["href"]
+        time.sleep(random.random()*3)
+        driver.get(root_url+report_url)
         
         
-        # soup = BeautifulSoup(driver.page_source, 'html.parser')
-        # report_res=soup.find(id="RSCONTENT")
-        # table=report_res.find("table")
-        # table=html_report_table(table)
-        # fin_report[Report_name]=table
-        fin_report=None
+        soup = BeautifulSoup(driver.page_source, 'html.parser')
+        report_res=soup.find(id="RSCONTENT")
+        table=report_res.find("table")
+        table=html_report_table(table)
+        fin_report[Report_name]=table
+        # fin_report=None
     return report_name_list, fin_report
 
 # ============================================
