@@ -1,0 +1,329 @@
+Please write the present illness of an admission note (The admission note please follow the example to have a opening tag and a closing tag of each section)
+Please described lab data in present illness without using bullet list
+giving the ER note and Lab data as following example:
+
+Example 1:
+ER note
+主訴(CHIEF COMPLIANT):
+  Fever to 39.1'c since 9/10. Poor appetite, fair activity. Hx source: parents.
+  
+  BW: 13.5kg.
+  現在疾病(PRESENT ILLNESS):
+  Dry cough, thick and purulent RN, post-tussive emesis (food content), no diarrhea. No nasal obstruction.
+  
+  
+  
+  過去病史(PAST HISTORY):
+  Allergy: NKDA PHx: prematurity, no developmental delay TOCC: sick kids at kindergarten
+  
+  
+  生命徵象(VITAL SIGNS):
+  血壓(BP): (22 / ) mmHg
+  脈搏(PR): 138 /min
+  呼吸(RR):  /min
+  體溫(BT): 38 /度C
+  現況(GENERAL CONDITION):
+  Acutely ill-looking. GCS Alert.
+  
+  頭耳眼鼻喉(HEENT):
+  Lt injected TM, no injected throat, no enlarged tonsils
+  頸部(NECK):
+  No LAPs, no goiters, freely movable, no neck tenderness
+  胸部與肺(CHEST And LUNGS):
+  bil coarse BS. RHB w/o murmurs no nasal flaring, no subcostal/suprasternal retractions
+  
+  腹部(ABDOMEN):
+  Soft, no palpable mass, normoactive BoS no rebound tenderness, no rashes
+  
+  背部與脊椎(BACK And SPINE):
+  no CV angle knocking pain
+  外生殖器官(EXOGENITALIA):
+  
+  直腸肛診(RECTAL EXAM):
+  
+  四肢(EXTREMITIES):
+  Freely movable, no rashes. Warm, CRT <2sec
+  神經學檢查(NEUROLOGICAL EXAM):
+  No muscle weakness, no cerebellar signs.
+  初步診斷(TENTATIVE DIAGNOSIS):
+  ICD10:
+  [ J18.0 ]Bronchopneumonia, unspecified organism
+
+--------------------------------------------------------------------------------
+
+Lab data
+BUN	    	 11  	(  )	 mg/dL 	 6~20 mg/dL 
+Na	    	 140  	(  )	 mmol/L 	 136~145 mmol/L 
+K	    	 4.1 	(  )	 mmol/L 	 3.5~5.1 mmol/L 
+Cl	   	  	(  )	  	  
+GLU	    	 94 	(  )	 mg/dL 	 65~100 mg/dL 
+Creat	 L  	 0.43 	(  )	 mg/dL 	 M:0.7~1.2; F:0.5-0.9 mg/dL 
+ALT	    	 <5 	(  )	 U/L 	 M:<41; F:<33 U/L 
+AST	 H  	 50 	(  )	 U/L 	 M:<40; F:<32 U/L 
+ALK-P	   	  	(  )	  	  
+CK	   	  	(  )	  	  
+Amylase	   	  	(  )	  	  
+CHOL	   	  	(  )	  	  
+TG	   	   	(  )	  	  
+GGT	   	  	(  )	  	  
+LDH	   	  	(  )	  	  
+T.BILI	   	   	(  )	  	  
+D.BILI	   	   	(  )	  	  
+T.Prot	   	  	(  )	  	  
+LAC	   	  	(  )	  	  
+I.P.	   	   	(  )	  	  
+Ca	   	  	(  )	  	  
+ALB	   	   	(  )	  	  
+Mg	   	  	(  )	  	  
+UA	   	   	(  )	  	  
+HDL	   	  	(  )	  	  
+CHOL/HDLC	   	   	(  )	  	  
+Lipase	   	   	(  )	  	  
+NH3	   	   	(  )	  	  
+sALC	   	  	(  )	  	  
+CRP	    	 0.17  	(  )	 mg/dL 	 <0.5 mg/dL 
+WBC	    	4320 	(  )	 /uL 	 4180 ~ 9380 
+RBC	    	4.86 	(  )	 10^6/uL 	 3.80 ~ 5.10 
+Hb	    	11.1 	(  )	 g/dL 	 10.9 ~ 15.6 
+Hct	    	34.6 	(  )	 % 	 33.4 ~ 45.5 
+MCV	 L  	71.2 	(  )	 fL 	 82.0 ~ 97.7 
+MCH	 L  	22.8 	(  )	 pg 	 27.6 ~ 33.0 
+MCHC	    	32.1 	(  )	 g/dL 	 32.0 ~ 35.2 
+RDW-CV	    	13.0 	(  )	 % 	 11.8 ~ 14.6 
+Plt	    	222000 	(  )	 /uL 	 145000 ~ 383000 
+ANC	 L  	1862 	(  )	 /uL 	 1890 ~ 6760 
+DC :%	 	 	 	 	 
+Band	    	0.0 	(  )	 % 	 0 ~ 5 
+Neu.	 L  	43.1 	(  )	 % 	 45.0 ~ 81.2 
+Lym.	 H  	50.0 	(  )	 % 	 13.0 ~ 45.5 
+Mono.	    	6.9 	(  )	 % 	 3.7 ~ 8.8 
+Eos.	 L  	0.0 	(  )	 % 	 0.2 ~ 6.6 
+Baso.	 L  	0.0 	(  )	 % 	 0.1 ~ 1.6 
+
+
+
+CXR:
+CHEST PA VIEW 
+ Date Of Examination:2024/09/12 22:33:07 
+ Date Of RCP:2024/09/12 
+  
+ > Clear bilateral costophrenic angles. 
+ > Borderline heart size. 
+ > Patchy infiltration noted over bilateral lung fields,
+inflammatory process is firstly considered. Space occupying
+lesions may be obscured. 
+
+-------------------------------------------------------------------------------------------
+Admission note 
+
+<div id="Cheif_complain">
+Fever to 39.1'c since 9/10 with cough and vomiting
+</div>
+ 
+ <div id ="PRESENT_ILLNESS">
+ This 3y-7m girl has medical history of Prematurity,  Respiratory distress syndrome, Respir
+ atory failure, Bronchopulmonary dysplasia.
+ 
+ This time, fever up to 39.1 was noticed since 09/10. Cough with whitish thick sputum, rhin
+ orhea, post-tussive emesis (food content) was also noticed. Her appetite was decreased wit
+ h mild decreased activity. She was first taken to LMD, and antipyretic was given, but recu
+ rrent fever was still noticed. She was then transferred to  our ER for help. At ER, vital
+ sign showed  PR 138/min, RR 22/min, BT 38°C. PE showed bilateral coarse breathing soun
+ d. Regular heart beats w/o murmurs no nasal flaring, no subcostal/suprasternal retractions
+ . Lab data showed normal range of CRP level (0.17 mg/ml), mild elevated AST level, with no
+ rmal range of WBC level.
+ CXR showed patchy infiltration noted over bilateral lung fields, inflammatory process is f
+ irstly considered. Upon admission, vital sign showed stable vital sign without fever, appe
+ tite improved. PE showed fair looking, bilateral coarse breathing sound, with regular hear
+ t beats, soft abdomen without tenderness. Under the impression of Bronchopneumonia, she wa
+ s admitted for further survey and management.
+ </div>
+
+ 
+<div id="PAST_HISTORY">
+ 1. Prematurity, GA 31+3 wks
+ 2. Very-low-birth-weight (VLBW) infant, birth body weight: 1060gm, SGA
+ 3. Respiratory distress syndrome,
+ -s/p NIPPV (1/15-31), CPAP(2/1-26), RA(2/27-3/15)
+ 4. Respiratory failure, resolved
+ -s/p ETT(3/15-18), NIPPV(3/19), RA(3/19-->)
+ 5. Bronchopulmonary dysplasia, grade I,
+ -28d/o(2/12): bubble CPAP 21/4, cGA36(2/16): bubble CPAP 21/4
+ -discharged under RA
+ 6. Patent ductus arteriosis, closed
+ -s/p propacetamol (1/20-30),
+ **cGA36(2/19)echo: No PDA. PFO 0.2, no pulmonary hypertension
+ 7. Bilateral IVH, grade I, with Periventricular echogenicities noted
+ 8. Anemia of prematurity,
+ -s/p PRBC transfusion(15cc/kg) on 1/28(HB=11.1), 2/11(HB=9.8)
+ -> s/p EPO+Fe+multivitamin
+ 9. Inguinal hernia, bilateral
+ -s/p bilateral high ligation on 2021/03/15
+ 10. Suspected early-onset neonatal sepsis, resolved
+ -s/p empirical antibiotic of ampicillin +cefotaxime(1/15-21), teico(1/21-25)
+ 11. Ventilator associated pneumonia, resolved
+ (sputum culture(3/16):Staph. aureus(few), oxacillin sensitive)
+ **(3/16)WBC=9500 Band=8 CRP=2.09,CXR: new LUL infitration)
+ -s/p tazocin(3/16-3/23)
+ 12. Apnea of prematurity, resolved
+ -s/p caffeine(1/16-29), Theophylline(3/17-24)
+ 13.Hypoalbuminemia, resolved
+</div> 
+
+<div id="PERSONAL_HISTORY">
+ birth history of G2P1AA1, GA 31+3weeks,  BBW:1060g via C/S(due to preeclampsia).
+</div> 
+
+<div id="PERINATAL_HISTORY">
+ 1. 母親在產前 14 天至分娩前後是否有發燒或病毒感染的症狀?-->Nil.
+ (如腸病毒症狀、腸胃道症狀、呼吸道症狀、皮疹等)
+ 2. 嬰兒之其他照顧者及接觸者是否有發燒或病毒感染的症狀?-->Nil.
+</div> 
+
+<div id="FAMILY_HISTORY">
+ no contributory
+ G6PD deficiency(-), thalassemia(-)
+</div> 
+
+ <div id="REVIEW_OF_SYSTEM">
+ GENERAL
+ conscious alert; activity:fair
+ HEAD
+ no trauma
+ EYES
+ normal
+ EARS
+ normal
+ NOSE
+ normal
+ MOUTH
+ no ulcerations over buccal mucosa
+ NECK
+ no neck stiffness
+ SKIN
+ some bruising ,
+ RESPIRATORY
+ ***productive cough
+ CARDIOVASCULAR
+ normal
+ GASTROINTESTINAL
+ normal
+ GENITOURINARY
+ normal
+ ENDOCRINE
+ normal
+ MUSCULOSKELETAL
+ normal
+ HEMATOLOGY
+ easy bruising
+ NEUROLOGY
+ no seizure
+ PSYCHIATRIC
+ nil
+ </div>
+ 
+<div id="PHYSICAL_EXAMINATION">
+ GENERAL
+ Acute ill looking
+ HEAD
+ Fontanelle not bulging, molding(-)
+ EYES
+ No leukocoria, no congested conjunctiva
+ EARS
+ Not lowset ear
+ NOSE
+ Patent, milia(-)
+ THROAT & MOUTH
+ No cleft palate, no pearl
+ NECK
+ No palpable mass,
+ SKIN
+ Supple and not dry
+ CHEST & LUNGS
+ Coarse breathing sound
+ HEART
+ Regular heart beats without murmurs
+ ABDOMEN
+ Soft and undistended
+ BACK & SPINE
+ No dimples
+ EXTREMITIES
+ Freely movable without deformities
+ 
+ MENTAL AND NUTRITIONAL CONDITIONS
+ MENTAL CONDITION EVALUATION
+ 1.ANXIETY (NERVOUSNESS) : NIL
+ 2. DEPRESSIVE MOOD : NIL
+ NUTRITIONAL STATUS EVALUATION(MUST SCORE)
+ NUTRITIONAL STATUS EVALUATION(MUST SCORE)
+ NUTRITIONAL STATUS EVALUATION(MUST SCORE)
+ NUTRITIONAL STATUS EVALUATION(MUST SCORE)
+ TOTAL SCORE : 0
+ RISK OF MALNUTRITION : LOW RISK (=0)
+ MANAGEMENT : ROUTINE CLINICAL CARE
+</div> 
+
+ 
+<div id="IMPRESSION">
+ . Bronchopneumonia
+ - Soonmelt 2024/09/12-
+ 
+ [Underlying]
+ 1. Prematurity, GA 31+3 wks
+ 2. Very-low-birth-weight (VLBW) infant, birth body weight: 1060gm, SGA
+ 3. Respiratory distress syndrome,
+ -s/p NIPPV (1/15-31), CPAP(2/1-26), RA(2/27-3/15)
+ 4. Respiratory failure, resolved
+ -s/p ETT(3/15-18), NIPPV(3/19), RA(3/19-->)
+ 5. Bronchopulmonary dysplasia, grade I,
+ -28d/o(2/12): bubble CPAP 21/4, cGA36(2/16): bubble CPAP 21/4
+ -discharged under RA
+ 6. Patent ductus arteriosis, closed
+ -s/p propacetamol (1/20-30),
+ **cGA36(2/19)echo: No PDA. PFO 0.2, no pulmonary hypertension
+ 7. Bilateral IVH, grade I, with Periventricular echogenicities noted
+ 8. Anemia of prematurity,
+ -s/p PRBC transfusion(15cc/kg) on 1/28(HB=11.1), 2/11(HB=9.8)
+ -> s/p EPO+Fe+multivitamin
+ 9. Inguinal hernia, bilateral
+ -s/p bilateral high ligation on 2021/03/15
+ 10. Suspected early-onset neonatal sepsis, resolved
+ -s/p empirical antibiotic of ampicillin +cefotaxime(1/15-21), teico(1/21-25)
+ 11. Ventilator associated pneumonia, resolved
+ (sputum culture(3/16):Staph. aureus(few), oxacillin sensitive)
+ **(3/16)WBC=9500 Band=8 CRP=2.09,CXR: new LUL infitration)
+ -s/p tazocin(3/16-3/23)
+ 12. Apnea of prematurity, resolved
+ -s/p caffeine(1/16-29), Theophylline(3/17-24)
+ 13.Hypoalbuminemia, resolved
+ </div>
+
+ <div id="Plan">
+ [Diagnostic]
+ . Monitor vital signs and clinical condition
+ . Check hemogram, CXR if needed
+ 
+ 
+ [Therapeutic]
+ . Keep symptomatic medication
+ . adequate IV hydration
+ 
+ 
+ [Educational]
+ . Explain current clinical condition and treatment plan to the patient and his family.
+ . Encourage ambulation and prevent from falling
+ 
+ [Measurable goal]
+ . Improved of clinical condition, vital signs and lab data
+ 
+ [全人醫療]
+ 全人: 病人對住院及後續治療有些焦慮, 予病情說明並給予心理支持
+ 全家: 對病人之家屬解釋病人病情並給予心理支持
+ 全程: 說明並安排住院之檢查與治療, 給予衛教; 安排出院後可接軌之照顧, 包括回診或居
+ 家照顧轉介
+ 全隊: 提供病人跨專科跨團隊之照顧
+ 全社區: 為病人尋求可利用之社區照護資源
+ </div>
+
+=============================================================================
+Here is the ER note and Lab data please generate the admission note that like the example is given, 
