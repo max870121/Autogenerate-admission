@@ -82,12 +82,15 @@ except:
 prompt_text=prompt_text+"-----------------------------------------------------------------------------------\n"
 
 time.sleep(3*random.random())
-report_num=5
+report_num=10
 report_name,recent_report=get_recent_report(driver, patID, report_num=report_num)
 for i in range(len(report_name)):
-	prompt_text=prompt_text+report_name[i]+"\n"
-	prompt_text=prompt_text+recent_report[report_name[i]].to_string()
-	prompt_text=prompt_text+"\n-----------------------------------------------------------------------------------\n"
+	try:
+		prompt_text=prompt_text+report_name[i]+"\n"
+		prompt_text=prompt_text+recent_report[report_name[i]].to_string()
+		prompt_text=prompt_text+"\n-----------------------------------------------------------------------------------\n"
+	except:
+		pass
 # breakpoint()
 # print(prompt_text)
 

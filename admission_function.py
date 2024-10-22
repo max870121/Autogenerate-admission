@@ -254,7 +254,7 @@ def html_report_table(table):
     return df
 
 def get_recent_report(driver, ID, report_num=3):
-    driver.get("https://web9.vghtpe.gov.tw/emr/qemr/qemr.cfm?action=findRes&tdept=ALL&histno="+ID)
+    driver.get("https://web9.vghtpe.gov.tw/emr/qemr/qemr.cfm?action=findRes&histno="+ID+"&tmonth=24&tdept=ALL")
     soup = BeautifulSoup(driver.page_source, 'html.parser')
     reslist=soup.find(id="reslist")
     table_body=reslist.tbody
@@ -271,12 +271,18 @@ def get_recent_report(driver, ID, report_num=3):
             print(Report_name)
             report_name_list.append(Report_name)
             report_url=report["href"]
+
+            if "(" in report_url:
+                report_url=report_url.split("(")[1].split(")")[0]
+                report_url=report_url[1:-1]
             time.sleep(random.random()*3)
+
             driver.get(root_url+report_url)
             
             
             soup = BeautifulSoup(driver.page_source, 'html.parser')
             report_res=soup.find(id="RSCONTENT")
+            # breakpoint()
             table=report_res.find("table")
             table=html_report_table(table)
             fin_report[Report_name]=table

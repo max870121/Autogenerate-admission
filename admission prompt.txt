@@ -1,53 +1,58 @@
-Please write the present illness of an admission note (The admission note please follow the example to have a opening tag and a closing tag of each section)
+Please write the admission note (The admission note please follow the example to have a opening tag and a closing tag of each section)
 Please described lab data in present illness without using bullet list
-giving the ER note and Lab data as following example:
+giving the OPD note or ER note and Lab data as following example:
 
 Example 1:
-ER note
-主訴(CHIEF COMPLIANT):
-  Fever to 39.1'c since 9/10. Poor appetite, fair activity. Hx source: parents.
-  
-  BW: 13.5kg.
-  現在疾病(PRESENT ILLNESS):
-  Dry cough, thick and purulent RN, post-tussive emesis (food content), no diarrhea. No nasal obstruction.
-  
-  
-  
-  過去病史(PAST HISTORY):
-  Allergy: NKDA PHx: prematurity, no developmental delay TOCC: sick kids at kindergarten
-  
-  
-  生命徵象(VITAL SIGNS):
-  血壓(BP): (22 / ) mmHg
-  脈搏(PR): 138 /min
-  呼吸(RR):  /min
-  體溫(BT): 38 /度C
-  現況(GENERAL CONDITION):
-  Acutely ill-looking. GCS Alert.
-  
-  頭耳眼鼻喉(HEENT):
-  Lt injected TM, no injected throat, no enlarged tonsils
-  頸部(NECK):
-  No LAPs, no goiters, freely movable, no neck tenderness
-  胸部與肺(CHEST And LUNGS):
-  bil coarse BS. RHB w/o murmurs no nasal flaring, no subcostal/suprasternal retractions
-  
-  腹部(ABDOMEN):
-  Soft, no palpable mass, normoactive BoS no rebound tenderness, no rashes
-  
-  背部與脊椎(BACK And SPINE):
-  no CV angle knocking pain
-  外生殖器官(EXOGENITALIA):
-  
-  直腸肛診(RECTAL EXAM):
-  
-  四肢(EXTREMITIES):
-  Freely movable, no rashes. Warm, CRT <2sec
-  神經學檢查(NEUROLOGICAL EXAM):
-  No muscle weakness, no cerebellar signs.
-  初步診斷(TENTATIVE DIAGNOSIS):
-  ICD10:
-  [ J18.0 ]Bronchopneumonia, unspecified organism
+OPD note
+BP: 0 /0   PP: 0   BH: 158.3   BW: 0   
+S:主觀資料
+Persistent low abdominal pain
+GI doctor suggested diagnostic laparoscopy
+CAL sister's friend
+【TOCC問診資料】日期：2024/10/17
+症狀：無
+旅遊史：無
+VPN批次查詢：無批次下載資料
+職業史：無職業
+VPN批次查詢：無批次下載資料
+接觸史：無
+群聚史：否
+【TOCC END】
+
+ 
+O:客觀資料
+Never had sex
+2024-08,
+TAS: CDS fluid 24x30mm, left adnexal cystic lesion 30x26mm, LC 20x13mm
+2024-08 CT (Dr. 沈, phone): no definite Gyn condition, R/O primary
+peritonitis
+2024-08 CT: Irregular thickening of the peritonium with small amount of
+loculated ascites at pelvis and mesenteric fat strandings. Differential
+diagnosis includes primary peritoneal serous carcinoma, carcinomatosis or
+pelvic inflammatory/ disease
+2024-09 CT: Irregular thickening of the peritonium with small amount of
+loculated ascites at pelvis and mesenteric fat strandings. Differential
+diagnosis includes primary peritoneal serous carcinoma, carcinomatosis or
+pelvic inflammatory/ disease
+2024-09,
+CA125: 89.8, CA153:15.3, CA199: 4.53, CEA:<0.3
+Today,
+2024-09 CT (Dr. 沈, phone): may be primary peritoniitis, TB?, suggested
+diagnostic laparoscopy or CT guided aspiration
+Explained to patient and her mother
+
+ 
+A:診斷
+567.89  Undefine Code
+789.00  ABDOMINAL PAIN, UNSPECIFIED SITE
+ 
+ 
+
+K65.8  Other peritonitis
+R10.9  Unspecified abdominal pain
+ 
+P:治療計畫
+Admission for diagnostic laparoscopy         
 
 --------------------------------------------------------------------------------
 
@@ -117,73 +122,63 @@ lesions may be obscured.
 Admission note 
 
 <div id="Cheif_complain">
-Fever to 39.1'c since 9/10 with cough and vomiting
+Lower abdominal pain noted for 4 months.
 </div>
  
  <div id ="PRESENT_ILLNESS">
- This 3y-7m girl has medical history of Prematurity,  Respiratory distress syndrome, Respir
- atory failure, Bronchopulmonary dysplasia.
+ This 25-year-old woman with no systemic disease
  
- This time, fever up to 39.1 was noticed since 09/10. Cough with whitish thick sputum, rhin
- orhea, post-tussive emesis (food content) was also noticed. Her appetite was decreased wit
- h mild decreased activity. She was first taken to LMD, and antipyretic was given, but recu
- rrent fever was still noticed. She was then transferred to  our ER for help. At ER, vital
- sign showed  PR 138/min, RR 22/min, BT 38°C. PE showed bilateral coarse breathing soun
- d. Regular heart beats w/o murmurs no nasal flaring, no subcostal/suprasternal retractions
- . Lab data showed normal range of CRP level (0.17 mg/ml), mild elevated AST level, with no
- rmal range of WBC level.
- CXR showed patchy infiltration noted over bilateral lung fields, inflammatory process is f
- irstly considered. Upon admission, vital sign showed stable vital sign without fever, appe
- tite improved. PE showed fair looking, bilateral coarse breathing sound, with regular hear
- t beats, soft abdomen without tenderness. Under the impression of Bronchopneumonia, she wa
- s admitted for further survey and management.
+ According to the patient, she has a gynecological history of no sex experience. Her menarc
+ he was at 13 years old and last menstrual period was 2024/10/5. She has a regular menstrua
+ l cycle (duration/interval: 30/5-6 days) with dysmenorrhea and menorrhagia. She was not re
+ ceiving hormone replacement therapy or other medication.
+ 
+ She had been in her usual health until 4 months ago, when lower abdominal pain noted devel
+ oped. Intermittent diarrhea was also noted. She came to our outpatient department for help
+ on 2024/08, CT scan was arranged and showed irregular thickening of the peritonium with s
+ mall amount of loculated ascites at pelvis and mesenteric fat strandings. Differential dia
+ gnosis includes primary peritoneal serous carcinoma, carcinomatosis or pelvic inflammatory
+ / disease. Follow-up CT scans in 2024/09 demonstrated irregular thickening of the peritone
+ um with loculated ascites and mesenteric fat strandings, raising concerns for primary peri
+ toneal serous carcinoma, carcinomatosis, or pelvic inflammatory disease. Laboratory result
+ s show an elevated CA125 level of 89.5, indicating possible peritoneal involvement. Diagno
+ stic laparoscopy was suggested.
+ 
+ After shared decision making, she decided to undergo the surgery. Upon admission, she was
+ stable. She denied, fever, loss of appetite, or recent bleeding. Under the tentative diag
+ nosis of abdominal pain suspected peritonitis, primary peritoneal serous carcinoma, carcin
+ omatosis, she was admitted for further management.
  </div>
 
  
 <div id="PAST_HISTORY">
- 1. Prematurity, GA 31+3 wks
- 2. Very-low-birth-weight (VLBW) infant, birth body weight: 1060gm, SGA
- 3. Respiratory distress syndrome,
- -s/p NIPPV (1/15-31), CPAP(2/1-26), RA(2/27-3/15)
- 4. Respiratory failure, resolved
- -s/p ETT(3/15-18), NIPPV(3/19), RA(3/19-->)
- 5. Bronchopulmonary dysplasia, grade I,
- -28d/o(2/12): bubble CPAP 21/4, cGA36(2/16): bubble CPAP 21/4
- -discharged under RA
- 6. Patent ductus arteriosis, closed
- -s/p propacetamol (1/20-30),
- **cGA36(2/19)echo: No PDA. PFO 0.2, no pulmonary hypertension
- 7. Bilateral IVH, grade I, with Periventricular echogenicities noted
- 8. Anemia of prematurity,
- -s/p PRBC transfusion(15cc/kg) on 1/28(HB=11.1), 2/11(HB=9.8)
- -> s/p EPO+Fe+multivitamin
- 9. Inguinal hernia, bilateral
- -s/p bilateral high ligation on 2021/03/15
- 10. Suspected early-onset neonatal sepsis, resolved
- -s/p empirical antibiotic of ampicillin +cefotaxime(1/15-21), teico(1/21-25)
- 11. Ventilator associated pneumonia, resolved
- (sputum culture(3/16):Staph. aureus(few), oxacillin sensitive)
- **(3/16)WBC=9500 Band=8 CRP=2.09,CXR: new LUL infitration)
- -s/p tazocin(3/16-3/23)
- 12. Apnea of prematurity, resolved
- -s/p caffeine(1/16-29), Theophylline(3/17-24)
- 13.Hypoalbuminemia, resolved
+ Nil
 </div> 
 
 <div id="PERSONAL_HISTORY">
- birth history of G2P1AA1, GA 31+3weeks,  BBW:1060g via C/S(due to preeclampsia).
+ Alcohol: denied
+ Betel nut: denied
+ Cigarette: denied
+ Drug allergy: denied
+ Food allergy: denied
+ Blood transfusion reaction: denied
 </div> 
 
 <div id="PERINATAL_HISTORY">
- 1. 母親在產前 14 天至分娩前後是否有發燒或病毒感染的症狀?-->Nil.
- (如腸病毒症狀、腸胃道症狀、呼吸道症狀、皮疹等)
- 2. 嬰兒之其他照顧者及接觸者是否有發燒或病毒感染的症狀?-->Nil.
+ Nil
 </div> 
 
+
+
 <div id="FAMILY_HISTORY">
- no contributory
- G6PD deficiency(-), thalassemia(-)
+ She denied relevant family history in three generations.
 </div> 
+
+<div id="OBGY_HISTORY">
+ Sex experience(-),
+ Regular, D/I 5-6 days/ 28 days dysmenorrhea(+), menorrhagia(+)
+ Hormone replacement therapy(-)
+</div>
 
  <div id="REVIEW_OF_SYSTEM">
  GENERAL
@@ -223,107 +218,76 @@ Fever to 39.1'c since 9/10 with cough and vomiting
  </div>
  
 <div id="PHYSICAL_EXAMINATION">
- GENERAL
- Acute ill looking
+  GENERAL
+ normal appearance, alert and oriented
+ Consciousness: E4V5M6
  HEAD
- Fontanelle not bulging, molding(-)
+ no superficial wound, no deformity, no bruising
  EYES
- No leukocoria, no congested conjunctiva
+ no pale conjunctiva, no icteric sclera
  EARS
- Not lowset ear
+ no purulent discharge, no rash
  NOSE
- Patent, milia(-)
+ not boggy, no nasal flaring, no epistaxis
  THROAT & MOUTH
- No cleft palate, no pearl
+ no injected throat, no oral ulcer
  NECK
- No palpable mass,
+ supple, no neck stiffness, no palpable lymph node
  SKIN
- Supple and not dry
+ no rash, no superficial wound, no surgical scar
  CHEST & LUNGS
- Coarse breathing sound
+ Inspection: no operation scar, no deformity
+ Palpation: symmetrical expansion
+ Percussion: resonance, no dullness
+ Auscultation: clear bilateral breathing sounds, no wheezing, no crackles, no rales
  HEART
- Regular heart beats without murmurs
+ regular heart beats, no murmur, no thrill, no heave
  ABDOMEN
- Soft and undistended
+ Inspection: flat, no operation scar
+ Auscultation: normoactive bowel sounds
+ Percussion: tympanic, no dullness
+ Palpation: soft, no tenderness
  BACK & SPINE
- No dimples
+ no knocking tenderness, no obvious scoliosis
  EXTREMITIES
- Freely movable without deformities
+ full range of motion, no muscle weakness, no joint tenderness, no edema
+ NEUROLOGIC
+ General appearance: no disorientation to time, person, and place
+ normal cranial nerves, normal motor functions, normal sensory functions,
+ normal deep tendon reflex, normal cerebellar function, no abnormal gait
+ DRE
+ not done
  
- MENTAL AND NUTRITIONAL CONDITIONS
- MENTAL CONDITION EVALUATION
- 1.ANXIETY (NERVOUSNESS) : NIL
- 2. DEPRESSIVE MOOD : NIL
- NUTRITIONAL STATUS EVALUATION(MUST SCORE)
- NUTRITIONAL STATUS EVALUATION(MUST SCORE)
- NUTRITIONAL STATUS EVALUATION(MUST SCORE)
- NUTRITIONAL STATUS EVALUATION(MUST SCORE)
- TOTAL SCORE : 0
- RISK OF MALNUTRITION : LOW RISK (=0)
- MANAGEMENT : ROUTINE CLINICAL CARE
 </div> 
 
  
 <div id="IMPRESSION">
- . Bronchopneumonia
- - Soonmelt 2024/09/12-
+ . Lower abdominal pain suspected peritonitis, primary peritoneal serous carcinoma, carcinomatosis
+ - arrange diagnostic laparoscopy surgery on 2024/10/23
  
- [Underlying]
- 1. Prematurity, GA 31+3 wks
- 2. Very-low-birth-weight (VLBW) infant, birth body weight: 1060gm, SGA
- 3. Respiratory distress syndrome,
- -s/p NIPPV (1/15-31), CPAP(2/1-26), RA(2/27-3/15)
- 4. Respiratory failure, resolved
- -s/p ETT(3/15-18), NIPPV(3/19), RA(3/19-->)
- 5. Bronchopulmonary dysplasia, grade I,
- -28d/o(2/12): bubble CPAP 21/4, cGA36(2/16): bubble CPAP 21/4
- -discharged under RA
- 6. Patent ductus arteriosis, closed
- -s/p propacetamol (1/20-30),
- **cGA36(2/19)echo: No PDA. PFO 0.2, no pulmonary hypertension
- 7. Bilateral IVH, grade I, with Periventricular echogenicities noted
- 8. Anemia of prematurity,
- -s/p PRBC transfusion(15cc/kg) on 1/28(HB=11.1), 2/11(HB=9.8)
- -> s/p EPO+Fe+multivitamin
- 9. Inguinal hernia, bilateral
- -s/p bilateral high ligation on 2021/03/15
- 10. Suspected early-onset neonatal sepsis, resolved
- -s/p empirical antibiotic of ampicillin +cefotaxime(1/15-21), teico(1/21-25)
- 11. Ventilator associated pneumonia, resolved
- (sputum culture(3/16):Staph. aureus(few), oxacillin sensitive)
- **(3/16)WBC=9500 Band=8 CRP=2.09,CXR: new LUL infitration)
- -s/p tazocin(3/16-3/23)
- 12. Apnea of prematurity, resolved
- -s/p caffeine(1/16-29), Theophylline(3/17-24)
- 13.Hypoalbuminemia, resolved
  </div>
 
  <div id="Plan">
  [Diagnostic]
  . Monitor vital signs and clinical condition
- . Check hemogram, CXR if needed
- 
+ . General survey including hemogram, biochemistry profile, and coagulation functions
+ . Chest X-ray and follow-up image studies if indicated
+ . Pre-operative survey including electrocardiogram and chest X-ray
  
  [Therapeutic]
- . Keep symptomatic medication
- . adequate IV hydration
- 
+ . Keep outpatient clinic medication for underlying diseases
+ . Arrange diagnostic laparoscopy surgery on 2024/10/23
  
  [Educational]
- . Explain current clinical condition and treatment plan to the patient and his family.
- . Encourage ambulation and prevent from falling
+ . Well informed the current condition and future plans to the patient / family
  
- [Measurable goal]
- . Improved of clinical condition, vital signs and lab data
- 
- [全人醫療]
- 全人: 病人對住院及後續治療有些焦慮, 予病情說明並給予心理支持
- 全家: 對病人之家屬解釋病人病情並給予心理支持
- 全程: 說明並安排住院之檢查與治療, 給予衛教; 安排出院後可接軌之照顧, 包括回診或居
- 家照顧轉介
- 全隊: 提供病人跨專科跨團隊之照顧
- 全社區: 為病人尋求可利用之社區照護資源
+ [Holistic care]
+ 全人︰同理病人之感受，說明病情並給予心理支持。
+ 全家：對病人之家屬解釋病人病情並給予心理支持。
+ 全程：說明並安排住院之治療，給予衛教；安排出院後可接軌之照顧，包括回診或居家照護轉介。
+ 全隊：臨床有需要時諮詢營養師、社工師、職能治療師；提供病人跨專科跨團隊之照護。
+ 全社區︰為病人尋求可利用之社區照護資源。
  </div>
 
 =============================================================================
-Here is the ER note and Lab data please generate the admission note that like the example is given, 
+Here is the ER note or OPD note and Lab data please generate the admission note that like the example is given:
