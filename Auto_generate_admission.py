@@ -56,23 +56,35 @@ soup = BeautifulSoup(driver.page_source, 'html.parser')
 
 
 patID=input("病歷號:")
+admin_intro=get_admin_Intro(driver,patID)
+VS=str(admin_intro.at[0, "主治醫師"])
+VS=VS.split("(")[0]
+print(VS)
 # patID="50324317"
+
+
 prompt_text=""
 
 with open("admission prompt.txt", 'r',encoding="utf-8") as f:
 	# breakpoint()
 	prompt_text=prompt_text+f.read()
 
-ER_note=get_ER(driver, patID)
+try:
+	prompt_text=prompt_text+"ER note\n"
+	ER_note=get_ER(driver, patID)
+	prompt_text=prompt_text+ER_note+"\n"
+	prompt_text=prompt_text+"-----------------------------------------------------------------------------------\n"
+except:
+	prompt_text=prompt_text+"OPD note\n"
+	OPD_note=get_OPD(driver, patID, VS)
+	prompt_text=prompt_text+OPD_note+"\n"
 
-prompt_text=prompt_text+ER_note+"\n"
 prompt_text=prompt_text+"-----------------------------------------------------------------------------------\n"
-
 
 time.sleep(3*random.random())
 report_num=5
 report_name,recent_report=get_recent_report(driver, patID, report_num=report_num)
-for i in range(report_num):
+for i in range(len(report_name)):
 	prompt_text=prompt_text+report_name[i]+"\n"
 	prompt_text=prompt_text+recent_report[report_name[i]].to_string()
 	prompt_text=prompt_text+"\n-----------------------------------------------------------------------------------\n"

@@ -264,21 +264,24 @@ def get_recent_report(driver, ID, report_num=3):
     report_name_list=[]
     fin_report={}
     for row in rows[:report_num]:
-        report = row.find("a")
-        # if not 
-        Report_name=report.text
-        print(Report_name)
-        report_name_list.append(Report_name)
-        report_url=report["href"]
-        time.sleep(random.random()*3)
-        driver.get(root_url+report_url)
-        
-        
-        soup = BeautifulSoup(driver.page_source, 'html.parser')
-        report_res=soup.find(id="RSCONTENT")
-        table=report_res.find("table")
-        table=html_report_table(table)
-        fin_report[Report_name]=table
+        try:
+            report = row.find("a")
+            # if not 
+            Report_name=report.text
+            print(Report_name)
+            report_name_list.append(Report_name)
+            report_url=report["href"]
+            time.sleep(random.random()*3)
+            driver.get(root_url+report_url)
+            
+            
+            soup = BeautifulSoup(driver.page_source, 'html.parser')
+            report_res=soup.find(id="RSCONTENT")
+            table=report_res.find("table")
+            table=html_report_table(table)
+            fin_report[Report_name]=table
+        except:
+            pass
         # fin_report=None
     return report_name_list, fin_report
 
@@ -367,7 +370,7 @@ def get_drainage(driver, ID):
 #==============================================
 def get_ER(driver, ID):
     adminID=get_adminID(driver,ID)
-    driver.get("https://web9.vghtpe.gov.tw/emr/qemr/qemr.cfm?action=findErn&histno=")
+    driver.get("https://web9.vghtpe.gov.tw/emr/qemr/qemr.cfm?action=findErn&histno="+ID)
     soup = BeautifulSoup(driver.page_source, 'html.parser')
     note_url=soup.find("a")["href"]
     root_url="https://web9.vghtpe.gov.tw/"
@@ -379,3 +382,44 @@ def get_ER(driver, ID):
     # print(table_body.text)
 
     return table_body.text
+
+#==============================================
+#get_Intro
+def admin_Intro_table(table):
+    table_body = table.find('tbody')
+    rows = table_body.find_all('tr')
+    columns_head=[]
+    data=[]
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        columns_head.append(cols[0].split("．")[1][:-1])
+        data.append(cols[1])
+    return pd.DataFrame([data],columns=columns_head)
+
+
+def get_admin_Intro(driver,ID):
+    driver.get("https://web9.vghtpe.gov.tw/emr/qemr/qemr.cfm?action=findPba&histno="+ID)
+    soup = BeautifulSoup(driver.page_source, 'html.parser')
+    table=soup.find("table")
+    return admin_Intro_table(table)
+#==============================================
+def get_OPD(driver, ID, VS):
+    adminID=get_adminID(driver,ID)
+    driver.get("https://web9.vghtpe.gov.tw/emr/qemr/qemr.cfm?action=findOpd&histno="+ID)
+    soup = BeautifulSoup(driver.page_source, 'html.parser')
+
+    table=soup.find("tbody",id="list")
+    rows = table.find_all('tr')
+    for row in rows:
+        cols = row.find_all('td')
+        OPD_VS=cols[2].text.strip().split()[0]
+        if OPD_VS==VS:
+            opd_url=cols[0].find("a")["href"]
+            
+            root_url="https://web9.vghtpe.gov.tw/"
+            driver.get(root_url+opd_url)
+            soup = BeautifulSoup(driver.page_source, 'html.parser')
+            table=soup.find("table")
+            table_body=table.find('tbody')
+            return table_body.text
