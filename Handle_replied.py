@@ -25,7 +25,7 @@ with open("Replied.html", 'r',encoding="utf-8") as f:
 	replied_text=replied_text+f.read()
 soup = BeautifulSoup(replied_text, 'html.parser')
 # print(soup)
-print(soup.find('div', id="Cheif_complain"))
+print(soup.find('div', id="Chief_complaint"))
 
 
 
@@ -53,12 +53,13 @@ password_field.send_keys(password)  # 替換成實際的密碼
 
 # 提交表單
 password_field.send_keys(Keys.RETURN)
-time.sleep(2)
+time.sleep(5)
 
 
 driver.get("https://web9.vghtpe.gov.tw/emr2/adminote/Admission.do?adistno="+ID+"&last=N&adicase=&action=add")
+time.sleep(3)
 Chief_complain = driver.find_element(By.ID, 'item02')
-Chief_complain.send_keys(soup.find('div', id="Cheif_complain").text) 
+Chief_complain.send_keys(soup.find('div', id="Chief_complaint").text) 
 
 PRESENT_ILLNESS = driver.find_element(By.ID, 'item03')
 PRESENT_ILLNESS.send_keys(soup.find('div', id="PRESENT_ILLNESS").text) 
@@ -76,7 +77,7 @@ IMPRESSION = driver.find_element(By.ID, 'item12')
 IMPRESSION.send_keys(soup.find('div', id="IMPRESSION").text) 
 
 Plan = driver.find_element(By.ID, 'item13')
-Plan.send_keys(soup.find('div', id="Plan").text) 
+Plan.send_keys(soup.find('div', id="PLAN").text) 
 
 save_button = driver.find_element(By.NAME, 'save')
 save_button.click()

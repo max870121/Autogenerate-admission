@@ -97,6 +97,31 @@ for i in range(len(report_name)):
 path="prompt.txt"
 with open(path, 'w',encoding="utf-8") as f:
 	f.write(prompt_text)
+
+from openai import OpenAI
+api_key = input("api_key:")
+client = OpenAI(api_key = api_key)
+
+
+completion = client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[
+        {"role": "system", 
+        "content": "You are a resident doctor, who needs to write admission note based on ER note or OPD note."
+        },
+        {
+            "role": "user",
+            "content": prompt_text
+        }
+    ]
+)
+
+print(completion.choices[0].message.content)
+breakpoint()
+path="Replied.html"
+with open(path, 'w',encoding="utf-8") as f:
+	f.write(str(completion.choices[0].message.content))
+
 driver.quit()
 
 # def set_paragraph_spacing(doc, spacing=0):
