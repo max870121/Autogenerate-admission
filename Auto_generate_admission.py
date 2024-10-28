@@ -21,6 +21,8 @@ import os
 from admission_function import *
 from datetime import datetime, timedelta
 import pwinput
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 # 配置 WebDriver
 chrome_options = Options()
@@ -115,12 +117,68 @@ completion = client.chat.completions.create(
         }
     ]
 )
+replied_text=completion.choices[0].message.content
 
-print(completion.choices[0].message.content)
+print(replied_text)
 breakpoint()
 path="Replied.html"
 with open(path, 'w',encoding="utf-8") as f:
-	f.write(str(completion.choices[0].message.content))
+	f.write(replied_text)
+
+soup = BeautifulSoup(replied_text, 'html.parser')
+
+
+driver.get("https://web9.vghtpe.gov.tw/emr2/adminote/Admission.do?adistno="+patID+"&last=N&adicase=&action=add")
+time.sleep(3)
+try:
+	Chief_complain = driver.find_element(By.ID, 'item02')
+	Chief_complain.send_keys(soup.find('div', id="Cheif_complain").text) 
+except:
+	pass
+
+PRESENT_ILLNESS = driver.find_element(By.ID, 'item03')
+PRESENT_ILLNESS.send_keys(soup.find('div', id="PRESENT_ILLNESS").text) 
+
+PAST_HISTORY = driver.find_element(By.ID, 'item04')
+PAST_HISTORY.send_keys(soup.find('div', id="PAST_HISTORY").text) 
+
+PERSONAL_HISTORY = driver.find_element(By.ID, 'item05')
+PERSONAL_HISTORY.send_keys(soup.find('div', id="PERSONAL_HISTORY").text) 
+
+FAMILY_HISTORY = driver.find_element(By.ID, 'item06')
+FAMILY_HISTORY.send_keys(soup.find('div', id="FAMILY_HISTORY").text) 
+
+IMPRESSION = driver.find_element(By.ID, 'item12')
+IMPRESSION.send_keys(soup.find('div', id="IMPRESSION").text) 
+
+try:
+	Plan = driver.find_element(By.ID, 'item13')
+	Plan.send_keys(soup.find('div', id="PLAN").text) 
+except:
+	try:
+		Plan = driver.find_element(By.ID, 'item13')
+		Plan.send_keys(soup.find('div', id="Plan").text)
+	except:
+		pass
+
+save_button = driver.find_element(By.NAME, 'save')
+save_button.click()
+
+WebDriverWait(driver, 10).until(EC.alert_is_present())
+confirm = driver.switch_to.alert
+
+# 獲取 confirm 的文本（可選）
+print(confirm.text)
+
+# 接受 confirm
+confirm.accept()
+breakpoint()
+
+
+
+
+
+
 
 driver.quit()
 
