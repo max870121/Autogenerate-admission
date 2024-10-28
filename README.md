@@ -33,7 +33,6 @@
   <h3 align="center">自動產生入院病歷</h3>
   <p align="center">
     自動抓取資料並產生入院病歷
-    (尚未完成)
   </p>
 </div>
 
@@ -70,7 +69,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-網路爬蟲可以自動爬取資料，並自動生成暫時存檔的住院病摘
+網路爬蟲可以自動爬取資料，並使用chatGPT的API自動生成暫時存檔的住院病摘
 
 ***注意***
 如果資料太多，可能會使資訊室擋IP，導致該電腦暫時無法登入系統，請重新開機過一會再試試
@@ -88,7 +87,8 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 1. Get [python](https://www.python.org/downloads/windows/)，並加python 加到path
 2. 升級chrome到最新版
-3. 本repositories，含有一個chrome driver，若與您電腦的chrome driver 不匹配，請下載與chrome版本對應的[chrome driver](https://googlechromelabs.github.io/chrome-for-testing/)
+3. 去[OpenAI](https://openai.com/index/openai-api/) 註冊帳號，並取得API key，可參考此[網站](https://ithelp.ithome.com.tw/articles/10333740)
+4. 本repositories，含有一個chrome driver，若與您電腦的chrome driver 不匹配，請下載與chrome版本對應的[chrome driver](https://googlechromelabs.github.io/chrome-for-testing/)
 
 
 ### Installation
@@ -108,15 +108,14 @@ To get a local copy up and running follow these simple example steps.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 1. 打帳號
 2. 打密碼
 3. 打需要產生摘要的病歷號
-4. 會自動暫存
+4. 打openAI 的api key
+5. 會自動暫存
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -125,9 +124,9 @@ To get a local copy up and running follow these simple example steps.
 ## Roadmap
 
 - [x] Get ER note
-- [ ] Auto generate prompt
-- [ ] Give prompt to ChatGPT
-- [ ] Fill in the admission note
+- [x] Auto generate prompt
+- [x] Give prompt to ChatGPT
+- [x] Fill in the admission note
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
