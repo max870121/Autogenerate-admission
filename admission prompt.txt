@@ -1,6 +1,22 @@
-Please write the admission note (The admission note please follow the example to have a opening tag and a closing tag of each section)
+Please write the admission note follow the Example 
+(The admission note please follow the example to have a opening tag and a closing tag of each section
+The tag id must be identical to the example given:
+<div id="Cheif_complain">,
+<div id ="PRESENT_ILLNESS">
+<div id="PAST_HISTORY">
+<div id="PERSONAL_HISTORY">
+<div id="PERINATAL_HISTORY">
+<div id="FAMILY_HISTORY">
+<div id="OBGY_HISTORY">
+<div id="REVIEW_OF_SYSTEM">
+<div id="PHYSICAL_EXAMINATION">
+<div id="IMPRESSION">
+<div id="Plan">
+)
 Please described lab data in present illness without using bullet list
-giving the OPD note or ER note and Lab data as following example:
+Please described Impression using bullet list
+======================================================================
+Giving the OPD note or ER note and Lab data as following example:
 
 Example 1:
 OPD note
@@ -41,21 +57,16 @@ Today,
 diagnostic laparoscopy or CT guided aspiration
 Explained to patient and her mother
 
- 
 A:診斷
 567.89  Undefine Code
 789.00  ABDOMINAL PAIN, UNSPECIFIED SITE
  
- 
-
 K65.8  Other peritonitis
 R10.9  Unspecified abdominal pain
  
 P:治療計畫
-Admission for diagnostic laparoscopy         
-
+Admission for diagnostic laparoscopy
 --------------------------------------------------------------------------------
-
 Lab data
 BUN	    	 11  	(  )	 mg/dL 	 6~20 mg/dL 
 Na	    	 140  	(  )	 mmol/L 	 136~145 mmol/L 
@@ -104,8 +115,6 @@ Lym.	 H  	50.0 	(  )	 % 	 13.0 ~ 45.5
 Mono.	    	6.9 	(  )	 % 	 3.7 ~ 8.8 
 Eos.	 L  	0.0 	(  )	 % 	 0.2 ~ 6.6 
 Baso.	 L  	0.0 	(  )	 % 	 0.1 ~ 1.6 
-
-
 
 CXR:
 CHEST PA VIEW 
@@ -168,8 +177,6 @@ Lower abdominal pain noted for 4 months.
  Nil
 </div> 
 
-
-
 <div id="FAMILY_HISTORY">
  She denied relevant family history in three generations.
 </div> 
@@ -181,90 +188,181 @@ Lower abdominal pain noted for 4 months.
 </div>
 
  <div id="REVIEW_OF_SYSTEM">
- GENERAL
- conscious alert; activity:fair
- HEAD
- no trauma
- EYES
- normal
- EARS
- normal
- NOSE
- normal
- MOUTH
+
+ <div id="ROS_GENERAL">
+ no body weight loss , no body weight gain , no fatigue , no weakness ,
+ no fever , no poor appetite , no chills
+ </div>
+ 
+ <div id="ROS_HEAD">
+ no trauma , no headache , no dizziness
+ </div>
+
+ <div id="ROS_EYE">
+ no glasses , no blurring
+ </div>
+ 
+ <div id="ROS_EARS">
+ no tinnitus , no otalgia , no otorrhea , no vertigo ,
+ no history of ear infections , no hearing impairment
+ </div>
+ 
+ <div id="ROS_NOSE">
+ no epistaxis , no nasal obstruction , no sinus problems ,
+ no sense of smell loss , no rhinorrhea
+ </div>
+
+ <div id="ROS_MOUTH">
+ no bleeding gums , no voice change , no swallowing disturbance ,
+ no pain over the oral cavity and tongue ,
  no ulcerations over buccal mucosa
- NECK
- no neck stiffness
- SKIN
- some bruising ,
- RESPIRATORY
- ***productive cough
- CARDIOVASCULAR
- normal
- GASTROINTESTINAL
- normal
- GENITOURINARY
- normal
- ENDOCRINE
- normal
- MUSCULOSKELETAL
- normal
- HEMATOLOGY
- easy bruising
- NEUROLOGY
- no seizure
- PSYCHIATRIC
- nil
+
+ </div>
+ <div id="ROS_NECK">
+ no pain over the neck , no neck stiffness
+ </div>
+
+ <div id="ROS_SKIN">
+ no rashes , no pruritus , no bruising , no dryness , no itching ,
+ no hair loss , no skin cancer , no cyanosis , no atrophy , no bullae fotmation
+ </div>
+
+ <div id="ROS_RESPIRATORY">
+ no chest pain , no sneezing , no dyspnea , no night sweats ,
+ no cough , no hemoptysis , no expectoration
+ </div>
+
+ <div id="ROS_CARDIOVASCULAR">
+ no intermittent claudication , no varicose vein ,
+ no history of MI(Myocardial Infarction) , no orthopnea ,
+ no exertional dyspnea , no palpitation , no chest tightness ,
+ no coldness of Limbs , no syncope , no fainting , no chest pain ,
+ no peripheral edema , no paroxysmal noctural dyspnea
+ </div>
+
+ <div id="ROS_GASTROINTESTINAL">
+ no dysphagia , no heart burn , no nausea , no acid regurgitation ,
+ no vomiting , no hematemesis , no indigestion ,
+ no diarrhea , no constipation , no melena , no clay-color stool ,
+ no hiccup , no difficult swallowing , no epigastric discomfort ,
+ no hemorrhoids , no intolerance for greasy food ,
+ no change of bowel habit , *** mild abdominal pain , no tenesmus
+ <div>
+
+ <div id="ROS_GASTROINTESTINAL">
+ no venereal disease , no frequency , no dribbling ,
+ no urgency , no hesitancy , no dysuria , no hematuria ,
+ no polyuria , no nocturia , no incontinence ,
+ no discharge , no sterility
+ </div>
+
+ <div id="ROS_ENDOCRINE">
+ no polyuria , no polydipsia , no loss of body weight , no weight gain ,
+ no polyphagia , no hormone therapy , no loss of libido , no tremor ,
+ no heat intolerance , no abnormal growth, no growth retardation ,
+ no proptosis
+ </div>
+
+ <div id="ROS_MUSCULOSKELETAL">
+ no trauma , no arthralgia , no twitching , no myalgia ,
+ no tenderness , no back pain , no morning joint stiffness ,
+ no numbness , no joint swelling , no muscle soreness
+ </div>
+
+ <div id="ROS_HEMATOLOGY">
+ no bleeding tendency , no gum bleeding , no anemia ,
+ no easy bruising
+ </div>
+
+ <div id="ROS_NEUROLOGY">
+ no seizure , no syncope , no weakness , no mood swing , normal ,
+ no memory loss , no sleep disturbance , no paresthesia , no slurring speech ,
+ no emotional disturbance , no drug and alcohol problems
+ </div>
+<div id="ROS_PSYCHIATRIC">
+ no sleep disturbance , no mood swing , no abnormal speech ,
+ no abnormal behavior , no thought disturbance ,
+ no perception disturbance , no disorientation to time , place and person ,
+ no intellectual function disturbance , calculation is normal ,
+ no suicide problem , no drug or alcohol problem
  </div>
  
 <div id="PHYSICAL_EXAMINATION">
-  GENERAL
+ <div id="PE_GENERAL">
  normal appearance, alert and oriented
  Consciousness: E4V5M6
- HEAD
+ </div>
+
+ <div id="PE_HEAD">
  no superficial wound, no deformity, no bruising
- EYES
+ </div>
+
+ <div id="PE_EYES">
  no pale conjunctiva, no icteric sclera
- EARS
+ </div>
+
+ <div id="PE_EARS">
  no purulent discharge, no rash
- NOSE
+ </div>
+
+ <div id="PE_NOSE">
  not boggy, no nasal flaring, no epistaxis
- THROAT & MOUTH
+ </div>
+
+ <div id="PE_THROAT">
  no injected throat, no oral ulcer
- NECK
+ </div>
+
+ <div id="PE_NECK">
  supple, no neck stiffness, no palpable lymph node
- SKIN
+ </div>
+
+ <div id="PE_SKIN">
  no rash, no superficial wound, no surgical scar
- CHEST & LUNGS
+ </div>
+
+ <div id="PE_CHEST">
  Inspection: no operation scar, no deformity
  Palpation: symmetrical expansion
  Percussion: resonance, no dullness
  Auscultation: clear bilateral breathing sounds, no wheezing, no crackles, no rales
- HEART
+ </div>
+
+ <div id="PE_HEART">
  regular heart beats, no murmur, no thrill, no heave
- ABDOMEN
+ </div>
+
+ <div id="PE_ABDOMEN">
  Inspection: flat, no operation scar
  Auscultation: normoactive bowel sounds
  Percussion: tympanic, no dullness
  Palpation: soft, no tenderness
- BACK & SPINE
+ </div>
+
+ <div id="PE_BACK">
  no knocking tenderness, no obvious scoliosis
- EXTREMITIES
+ </div>
+
+ <div id="PE_EXTREMITIES">
  full range of motion, no muscle weakness, no joint tenderness, no edema
- NEUROLOGIC
+ </div>
+
+ <div id="PE_NEUROLOGIC">
  General appearance: no disorientation to time, person, and place
  normal cranial nerves, normal motor functions, normal sensory functions,
  normal deep tendon reflex, normal cerebellar function, no abnormal gait
- DRE
- not done
+ </div>
  
+ <div id="PE_DRE">
+ not done
+ </div>
+
 </div> 
 
  
-<div id="IMPRESSION">
+ <div id="IMPRESSION">
  . Lower abdominal pain suspected peritonitis, primary peritoneal serous carcinoma, carcinomatosis
- - arrange diagnostic laparoscopy surgery on 2024/10/23
- 
+    - arrange diagnostic laparoscopy surgery on 2024/10/23
  </div>
 
  <div id="Plan">
