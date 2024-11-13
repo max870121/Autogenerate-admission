@@ -62,9 +62,12 @@ soup = BeautifulSoup(driver.page_source, 'html.parser')
 admin_intro=get_admin_Intro(driver,patID)
 VS=str(admin_intro.at[0, "主治醫師"])
 VS=VS.split("(")[0]
+age=str(admin_intro.at[0, "生　日　"][8:])
+gender=str(admin_intro.at[0, "性　別　"])
 print(VS)
+# print(admin_intro)
 # patID="50324317"
-
+# breakpoint()
 
 prompt_text=""
 
@@ -72,6 +75,11 @@ with open("admission prompt.txt", 'r',encoding="utf-8") as f:
 	# breakpoint()
 	prompt_text=prompt_text+f.read()
 
+prompt_text=prompt_text+"\n"
+prompt_text=prompt_text+"Patient info: "
+prompt_text=prompt_text+"Age: "+age
+prompt_text=prompt_text+"Gender: "+gender
+prompt_text=prompt_text+"\n"
 try:
 	prompt_text=prompt_text+"ER note\n"
 	ER_note=get_ER(driver, patID)
@@ -126,6 +134,7 @@ path="Replied.html"
 with open(path, 'w',encoding="utf-8") as f:
 	f.write(replied_text)
 
+breakpoint()
 soup = BeautifulSoup(replied_text, 'html.parser')
 
 
