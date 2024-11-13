@@ -1,31 +1,80 @@
-Please write the admission note follow the Example 
-(The admission note please follow the example to have a opening tag and a closing tag of each section
-The tag id must be identical to the example given:
-<div id="Cheif_complain">,
+Please write the admission note follow the Rules and Example 
+Rules:
+1. The admission note please follow the Example to have a opening tag and a closing tag of each section
+2. The tag id must be identical to the example given
+"""
+<div id="Cheif_complain">
 <div id ="PRESENT_ILLNESS">
 <div id="PAST_HISTORY">
 <div id="PERSONAL_HISTORY">
 <div id="PERINATAL_HISTORY">
 <div id="FAMILY_HISTORY">
 <div id="OBGY_HISTORY">
-<div id="REVIEW_OF_SYSTEM">
-<div id="PHYSICAL_EXAMINATION">
 <div id="IMPRESSION">
-<div id="Plan">
-)
-Please described lab data in present illness without using bullet list
-Please described Impression using bullet list
+  <div id="Plan">
+"""
+3. Please described present illness in the following
+   . First described the age gender and past medical history past medical history using bullet list
+   . Second described the cheif complained and aditional symptom of the patient, and what the patient do, for example go to LMD but in vain
+   . Third write " He/She visited our OPD or ER for help", and described the OPD/ ER finding including lab data and image without using bullet list
+   . Finally writ "Under the impression of [Impression ], he/she was admitted for surgery/ chemotherapy/ further survey and mangement"
+5. Please described Impression using bullet list starting with "."
+ . The impression must be a disease
+ . The management of the disease must be a sub-bullet list using "-" like the following:
+  """
+  . Lower abdominal pain suspected peritonitis, primary peritoneal serous carcinoma, carcinomatosis
+    - arrange diagnostic laparoscopy surgery on 2024/10/23
+  """
+6. Review of system have different tag must be identical as the following:
+"""
+<div name="GENERAL" id="ROS_1">
+<div name="HEAD" id="ROS_2">
+<div name="EYES" id="ROS_3">
+ <div name="EARS" id="ROS_4">
+<div name="NOSE" id="ROS_5">
+<div name="MOUTH" id="ROS_6">
+<div name="NECK" id="ROS_7">
+<div name="SKIN" id="ROS_8">
+<div name="RESPIRATORY" id="ROS_9">
+<div name="CARDIOVASCULAR" id="ROS_10">
+<div name="GASTROINTESTINAL"  id="ROS_11">
+<div name="GENITOURINARY" id="ROS_12">
+<div name="ENDOCRINE" id="ROS_13">
+<div name="MUSCULOSKELETAL" id="ROS_14">
+<div name="HEMATOLOGY" id="ROS_15">
+<div name="NEUROLOGY" id="ROS_16">
+<div name="PSYCHOSOCIAL" id="ROS_17">
+"""
+7. Physical examination have different tag must be identical as the following:
+"""
+<div name="GENERAL" id="PE_1">
+<div name="HEAD" id="PE_2">
+<div name="EYES" id="PE_3">
+<div name="EARS" id="PE_4">
+<div name="NOSE" id="PE_5">
+<div name="THROAT & MOUTH" id="PE_6">
+<div name="NECK" id="PE_7">
+<div name="SKIN" id="PE_8">
+<div name="CHEST & LUNGS" id="PE_9">
+<div name="HEART" id="PE_10">
+<div name="ABDOMEN" id="PE_11">
+<div name="BACK & SPINE" id="PE_12">
+<div name="EXTREMITIES" id="PE_13">
+<div name="NEUROLOGIC" id="PE_14">
+<div name="DRE" id="PE_15">
+<div name="PV+PR" id="PE_16">
+<div name="SPECIAL" id="PE_17">
 ======================================================================
 Giving the OPD note or ER note and Lab data as following example:
 
 Example 1:
 OPD note
-BP: 0 /0   PP: 0   BH: 158.3   BW: 0   
 S:主觀資料
-Persistent low abdominal pain
-GI doctor suggested diagnostic laparoscopy
-CAL sister's friend
-【TOCC問診資料】日期：2024/10/17
+left eardrum perforation and hearing impairment
+consultation for surgery
+no drug allergy
+diving +
+【TOCC問診資料】日期：2024/10/22
 症狀：無
 旅遊史：無
 VPN批次查詢：無批次下載資料
@@ -37,126 +86,33 @@ VPN批次查詢：無批次下載資料
 
  
 O:客觀資料
-Never had sex
-2024-08,
-TAS: CDS fluid 24x30mm, left adnexal cystic lesion 30x26mm, LC 20x13mm
-2024-08 CT (Dr. 沈, phone): no definite Gyn condition, R/O primary
-peritonitis
-2024-08 CT: Irregular thickening of the peritonium with small amount of
-loculated ascites at pelvis and mesenteric fat strandings. Differential
-diagnosis includes primary peritoneal serous carcinoma, carcinomatosis or
-pelvic inflammatory/ disease
-2024-09 CT: Irregular thickening of the peritonium with small amount of
-loculated ascites at pelvis and mesenteric fat strandings. Differential
-diagnosis includes primary peritoneal serous carcinoma, carcinomatosis or
-pelvic inflammatory/ disease
-2024-09,
-CA125: 89.8, CA153:15.3, CA199: 4.53, CEA:<0.3
-Today,
-2024-09 CT (Dr. 沈, phone): may be primary peritoniitis, TB?, suggested
-diagnostic laparoscopy or CT guided aspiration
-Explained to patient and her mother
+20241022 scope: left eardrum perforation with pus s/p culture and local tx@
+PTA: left conductive hearing loss, R/L 12/25dBHL
+ETF: right poor
+【疼痛評估：2024-10-22】0【疼痛評估】
 
-A:診斷
-567.89  Undefine Code
-789.00  ABDOMINAL PAIN, UNSPECIFIED SITE
  
-K65.8  Other peritonitis
-R10.9  Unspecified abdominal pain
+A:診斷
+382.3  COM,SUPPURATIVE
+ 
+ 
+ 
+
+H66.3X9  Other chronic suppurative otitis media, unspecified ear
  
 P:治療計畫
-Admission for diagnostic laparoscopy
---------------------------------------------------------------------------------
-Lab data
-BUN	    	 11  	(  )	 mg/dL 	 6~20 mg/dL 
-Na	    	 140  	(  )	 mmol/L 	 136~145 mmol/L 
-K	    	 4.1 	(  )	 mmol/L 	 3.5~5.1 mmol/L 
-Cl	   	  	(  )	  	  
-GLU	    	 94 	(  )	 mg/dL 	 65~100 mg/dL 
-Creat	 L  	 0.43 	(  )	 mg/dL 	 M:0.7~1.2; F:0.5-0.9 mg/dL 
-ALT	    	 <5 	(  )	 U/L 	 M:<41; F:<33 U/L 
-AST	 H  	 50 	(  )	 U/L 	 M:<40; F:<32 U/L 
-ALK-P	   	  	(  )	  	  
-CK	   	  	(  )	  	  
-Amylase	   	  	(  )	  	  
-CHOL	   	  	(  )	  	  
-TG	   	   	(  )	  	  
-GGT	   	  	(  )	  	  
-LDH	   	  	(  )	  	  
-T.BILI	   	   	(  )	  	  
-D.BILI	   	   	(  )	  	  
-T.Prot	   	  	(  )	  	  
-LAC	   	  	(  )	  	  
-I.P.	   	   	(  )	  	  
-Ca	   	  	(  )	  	  
-ALB	   	   	(  )	  	  
-Mg	   	  	(  )	  	  
-UA	   	   	(  )	  	  
-HDL	   	  	(  )	  	  
-CHOL/HDLC	   	   	(  )	  	  
-Lipase	   	   	(  )	  	  
-NH3	   	   	(  )	  	  
-sALC	   	  	(  )	  	  
-CRP	    	 0.17  	(  )	 mg/dL 	 <0.5 mg/dL 
-WBC	    	4320 	(  )	 /uL 	 4180 ~ 9380 
-RBC	    	4.86 	(  )	 10^6/uL 	 3.80 ~ 5.10 
-Hb	    	11.1 	(  )	 g/dL 	 10.9 ~ 15.6 
-Hct	    	34.6 	(  )	 % 	 33.4 ~ 45.5 
-MCV	 L  	71.2 	(  )	 fL 	 82.0 ~ 97.7 
-MCH	 L  	22.8 	(  )	 pg 	 27.6 ~ 33.0 
-MCHC	    	32.1 	(  )	 g/dL 	 32.0 ~ 35.2 
-RDW-CV	    	13.0 	(  )	 % 	 11.8 ~ 14.6 
-Plt	    	222000 	(  )	 /uL 	 145000 ~ 383000 
-ANC	 L  	1862 	(  )	 /uL 	 1890 ~ 6760 
-DC :%	 	 	 	 	 
-Band	    	0.0 	(  )	 % 	 0 ~ 5 
-Neu.	 L  	43.1 	(  )	 % 	 45.0 ~ 81.2 
-Lym.	 H  	50.0 	(  )	 % 	 13.0 ~ 45.5 
-Mono.	    	6.9 	(  )	 % 	 3.7 ~ 8.8 
-Eos.	 L  	0.0 	(  )	 % 	 0.2 ~ 6.6 
-Baso.	 L  	0.0 	(  )	 % 	 0.1 ~ 1.6 
-
-CXR:
-CHEST PA VIEW 
- Date Of Examination:2024/09/12 22:33:07 
- Date Of RCP:2024/09/12 
-  
- > Clear bilateral costophrenic angles. 
- > Borderline heart size. 
- > Patchy infiltration noted over bilateral lung fields,
-inflammatory process is firstly considered. Space occupying
-lesions may be obscured. 
+otoscope indication: left eardrum perforation                                                                                                                   
+arrange endoscopic tympanoplasty +/- E-tube balloon tuboplasty on 2024/11/7                                                                                     
 
 -------------------------------------------------------------------------------------------
 Admission note 
 
 <div id="Cheif_complain">
-Lower abdominal pain noted for 4 months.
+__Left/Right ear discharge off and on for __
 </div>
  
  <div id ="PRESENT_ILLNESS">
- This 25-year-old woman with no systemic disease
- 
- According to the patient, she has a gynecological history of no sex experience. Her menarc
- he was at 13 years old and last menstrual period was 2024/10/5. She has a regular menstrua
- l cycle (duration/interval: 30/5-6 days) with dysmenorrhea and menorrhagia. She was not re
- ceiving hormone replacement therapy or other medication.
- 
- She had been in her usual health until 4 months ago, when lower abdominal pain noted devel
- oped. Intermittent diarrhea was also noted. She came to our outpatient department for help
- on 2024/08, CT scan was arranged and showed irregular thickening of the peritonium with s
- mall amount of loculated ascites at pelvis and mesenteric fat strandings. Differential dia
- gnosis includes primary peritoneal serous carcinoma, carcinomatosis or pelvic inflammatory
- / disease. Follow-up CT scans in 2024/09 demonstrated irregular thickening of the peritone
- um with loculated ascites and mesenteric fat strandings, raising concerns for primary peri
- toneal serous carcinoma, carcinomatosis, or pelvic inflammatory disease. Laboratory result
- s show an elevated CA125 level of 89.5, indicating possible peritoneal involvement. Diagno
- stic laparoscopy was suggested.
- 
- After shared decision making, she decided to undergo the surgery. Upon admission, she was
- stable. She denied, fever, loss of appetite, or recent bleeding. Under the tentative diag
- nosis of abdominal pain suspected peritonitis, primary peritoneal serous carcinoma, carcin
- omatosis, she was admitted for further management.
+ This __-year-old __lady/gentleman had medical history significant for __. The patient presented with __left/right otorrhea for __, and thus visited our otology OPD for further evaluation. Examination showed __left/right drum perforation around __% with discharge. PTA showed bilateral SNHL with __left/right air-bone gap, __/__ dB HL. Medical therapy was given, with resolution of discharge. After discussion, surgical management was suggested. Under the impression of __left/right COM, the patient was admitted for tympanoplasty.
  </div>
 
  
@@ -182,9 +138,6 @@ Lower abdominal pain noted for 4 months.
 </div> 
 
 <div id="OBGY_HISTORY">
- Sex experience(-),
- Regular, D/I 5-6 days/ 28 days dysmenorrhea(+), menorrhagia(+)
- Hormone replacement therapy(-)
 </div>
 
  <div id="REVIEW_OF_SYSTEM">
@@ -203,8 +156,9 @@ Lower abdominal pain noted for 4 months.
  </div>
  
  <div id="ROS_EARS">
- no tinnitus , no otalgia , no otorrhea , no vertigo ,
- no history of ear infections , no hearing impairment
+  no tinnitus , no otalgia , ** otorrhea , no vertigo ,
+     ** history of ear infections , ** hearing impairment ,
+     ** inflammatory change
  </div>
  
  <div id="ROS_NOSE">
@@ -302,7 +256,7 @@ Lower abdominal pain noted for 4 months.
  </div>
 
  <div id="PE_EARS">
- no purulent discharge, no rash
+** eardrum peforation, bilateral patent external auditory canal
  </div>
 
  <div id="PE_NOSE">
@@ -361,23 +315,23 @@ Lower abdominal pain noted for 4 months.
 
  
  <div id="IMPRESSION">
- . Lower abdominal pain suspected peritonitis, primary peritoneal serous carcinoma, carcinomatosis
-    - arrange diagnostic laparoscopy surgery on 2024/10/23
+ . Left otitis media with eardrum perforation
  </div>
 
  <div id="Plan">
- [Diagnostic]
- . Monitor vital signs and clinical condition
- . General survey including hemogram, biochemistry profile, and coagulation functions
- . Chest X-ray and follow-up image studies if indicated
- . Pre-operative survey including electrocardiogram and chest X-ray
- 
- [Therapeutic]
- . Keep outpatient clinic medication for underlying diseases
- . Arrange diagnostic laparoscopy surgery on 2024/10/23
- 
- [Educational]
- . Well informed the current condition and future plans to the patient / family
+ [Diagnostic] 
+1. on Otorhinolaryngology Ward routine 
+2. arrange preoperative survey
+
+[Therapeutic] 
+1. arrange surgery if not contraindicated 
+
+[Educational] 
+1. explain current condition to the patient and the family 
+2. explain risks and benefits of the therapy; obtain informed consent 
+
+[Goal]
+1. completion of therapy, resolution of symptoms
  
  [Holistic care]
  全人︰同理病人之感受，說明病情並給予心理支持。
