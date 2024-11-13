@@ -35,8 +35,9 @@ service = Service(executable_path=r'chromedriver.exe')
 driver = webdriver.Chrome(service=service,options=chrome_options)
 
 username=input("帳號 : ")
-
 password = pwinput.pwinput(prompt='密碼: ', mask='*')
+api_key = input("api_key:")
+patID=input("病歷號:")
 
 login_url = 'https://eip.vghtpe.gov.tw/login.php'  #
 driver.get(login_url)
@@ -57,7 +58,7 @@ soup = BeautifulSoup(driver.page_source, 'html.parser')
 
 
 
-patID=input("病歷號:")
+
 admin_intro=get_admin_Intro(driver,patID)
 VS=str(admin_intro.at[0, "主治醫師"])
 VS=VS.split("(")[0]
@@ -101,7 +102,7 @@ with open(path, 'w',encoding="utf-8") as f:
 	f.write(prompt_text)
 
 from openai import OpenAI
-api_key = input("api_key:")
+
 client = OpenAI(api_key = api_key)
 
 
@@ -120,7 +121,7 @@ completion = client.chat.completions.create(
 replied_text=completion.choices[0].message.content
 
 print(replied_text)
-breakpoint()
+# breakpoint()
 path="Replied.html"
 with open(path, 'w',encoding="utf-8") as f:
 	f.write(replied_text)
@@ -135,6 +136,9 @@ try:
 	Chief_complain.send_keys(soup.find('div', id="Cheif_complain").text) 
 except:
 	pass
+
+Transfer_hospital = driver.find_element(By.ID, 'aditran')
+Transfer_hospital.send_keys("N/A") 
 
 PRESENT_ILLNESS = driver.find_element(By.ID, 'item03')
 PRESENT_ILLNESS.send_keys(soup.find('div', id="PRESENT_ILLNESS").text) 
@@ -161,6 +165,30 @@ except:
 	except:
 		pass
 
+# Review of system
+
+for i in range(17):
+	ROS_AI_id="ROS_"+str(i+1)
+	if i<9:
+		ROS_id='item100'+str(i+1)
+	else:
+		ROS_id='item10'+str(i+1)
+	ROS = driver.find_element(By.ID, ROS_id)
+	ROS.send_keys(soup.find('div', id=ROS_AI_id).text) 
+
+## PE
+for i in range(17):
+	PE_AI_id="PE_"+str(i+1)
+	if i<9:
+		PE_id='item110'+str(i+1)
+	else:
+		PE_id='item11'+str(i+1)
+	PE = driver.find_element(By.ID, PE_id)
+	PE.send_keys(soup.find('div', id=PE_AI_id).text) 
+
+
+
+
 save_button = driver.find_element(By.NAME, 'save')
 save_button.click()
 
@@ -168,19 +196,18 @@ WebDriverWait(driver, 10).until(EC.alert_is_present())
 confirm = driver.switch_to.alert
 
 # 獲取 confirm 的文本（可選）
-print(confirm.text)
+# print(confirm.text)
 
 # 接受 confirm
 confirm.accept()
-breakpoint()
+print("正在儲存")
 
-
-
-
+time.sleep(10)
 
 
 
 driver.quit()
+print("儲存完成")
 
 # def set_paragraph_spacing(doc, spacing=0):
 #     """Set paragraph spacing for all paragraphs in the document."""
@@ -277,7 +304,7 @@ driver.quit()
 #     assessment_cell=row_cells[1]
 #     paragraph = assessment_cell.paragraphs[0]
 #     try:
-#         progress_note=get_progress_note(driver,ID,num=5)
+#         progress_note=get_progress_note(driver,ID,num=10)
 #         time.sleep(3*random.random())
 
 #         for i in range(len(progress_note)):

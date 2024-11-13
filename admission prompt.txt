@@ -140,53 +140,51 @@ __Left/Right ear discharge off and on for __
 <div id="OBGY_HISTORY">
 </div>
 
- <div id="REVIEW_OF_SYSTEM">
 
- <div id="ROS_GENERAL">
+<div name="GENERAL" id="ROS_1">
  no body weight loss , no body weight gain , no fatigue , no weakness ,
  no fever , no poor appetite , no chills
  </div>
  
- <div id="ROS_HEAD">
+ <div name="HEAD" id="ROS_2">
  no trauma , no headache , no dizziness
  </div>
 
- <div id="ROS_EYE">
+ <div name="EYES" id="ROS_3">
  no glasses , no blurring
  </div>
  
- <div id="ROS_EARS">
-  no tinnitus , no otalgia , ** otorrhea , no vertigo ,
-     ** history of ear infections , ** hearing impairment ,
-     ** inflammatory change
+ <div name="EARS" id="ROS_4">
+ no tinnitus , no otalgia , no otorrhea , no vertigo ,
+ no history of ear infections , no hearing impairment
  </div>
  
- <div id="ROS_NOSE">
+ <div name="NOSE" id="ROS_5">
  no epistaxis , no nasal obstruction , no sinus problems ,
  no sense of smell loss , no rhinorrhea
  </div>
 
- <div id="ROS_MOUTH">
+ <div name="MOUTH" id="ROS_6">
  no bleeding gums , no voice change , no swallowing disturbance ,
  no pain over the oral cavity and tongue ,
  no ulcerations over buccal mucosa
 
  </div>
- <div id="ROS_NECK">
+ <div name="NECK" id="ROS_7">
  no pain over the neck , no neck stiffness
  </div>
 
- <div id="ROS_SKIN">
+ <div name="SKIN" id="ROS_8">
  no rashes , no pruritus , no bruising , no dryness , no itching ,
  no hair loss , no skin cancer , no cyanosis , no atrophy , no bullae fotmation
  </div>
 
- <div id="ROS_RESPIRATORY">
+ <div name="RESPIRATORY" id="ROS_9">
  no chest pain , no sneezing , no dyspnea , no night sweats ,
  no cough , no hemoptysis , no expectoration
  </div>
 
- <div id="ROS_CARDIOVASCULAR">
+ <div name="CARDIOVASCULAR" id="ROS_10">
  no intermittent claudication , no varicose vein ,
  no history of MI(Myocardial Infarction) , no orthopnea ,
  no exertional dyspnea , no palpitation , no chest tightness ,
@@ -194,7 +192,7 @@ __Left/Right ear discharge off and on for __
  no peripheral edema , no paroxysmal noctural dyspnea
  </div>
 
- <div id="ROS_GASTROINTESTINAL">
+ <div name="GASTROINTESTINAL"  id="ROS_11">
  no dysphagia , no heart burn , no nausea , no acid regurgitation ,
  no vomiting , no hematemesis , no indigestion ,
  no diarrhea , no constipation , no melena , no clay-color stool ,
@@ -203,37 +201,37 @@ __Left/Right ear discharge off and on for __
  no change of bowel habit , *** mild abdominal pain , no tenesmus
  <div>
 
- <div id="ROS_GASTROINTESTINAL">
+ <div name="GENITOURINARY" id="ROS_12">
  no venereal disease , no frequency , no dribbling ,
  no urgency , no hesitancy , no dysuria , no hematuria ,
  no polyuria , no nocturia , no incontinence ,
  no discharge , no sterility
  </div>
 
- <div id="ROS_ENDOCRINE">
+ <div name="ENDOCRINE" id="ROS_13">
  no polyuria , no polydipsia , no loss of body weight , no weight gain ,
  no polyphagia , no hormone therapy , no loss of libido , no tremor ,
  no heat intolerance , no abnormal growth, no growth retardation ,
  no proptosis
  </div>
 
- <div id="ROS_MUSCULOSKELETAL">
+ <div name="MUSCULOSKELETAL" id="ROS_14">
  no trauma , no arthralgia , no twitching , no myalgia ,
  no tenderness , no back pain , no morning joint stiffness ,
  no numbness , no joint swelling , no muscle soreness
  </div>
 
- <div id="ROS_HEMATOLOGY">
+ <div name="HEMATOLOGY" id="ROS_15">
  no bleeding tendency , no gum bleeding , no anemia ,
  no easy bruising
  </div>
 
- <div id="ROS_NEUROLOGY">
+ <div name="NEUROLOGY" id="ROS_16">
  no seizure , no syncope , no weakness , no mood swing , normal ,
  no memory loss , no sleep disturbance , no paresthesia , no slurring speech ,
  no emotional disturbance , no drug and alcohol problems
  </div>
-<div id="ROS_PSYCHIATRIC">
+<div name="PSYCHOSOCIAL" id="ROS_17">
  no sleep disturbance , no mood swing , no abnormal speech ,
  no abnormal behavior , no thought disturbance ,
  no perception disturbance , no disorientation to time , place and person ,
@@ -241,77 +239,81 @@ __Left/Right ear discharge off and on for __
  no suicide problem , no drug or alcohol problem
  </div>
  
-<div id="PHYSICAL_EXAMINATION">
- <div id="PE_GENERAL">
+ <div name="GENERAL" id="PE_1">
  normal appearance, alert and oriented
  Consciousness: E4V5M6
  </div>
 
- <div id="PE_HEAD">
+ <div name="HEAD" id="PE_2">
  no superficial wound, no deformity, no bruising
  </div>
 
- <div id="PE_EYES">
+ <div name="EYES" id="PE_3">
  no pale conjunctiva, no icteric sclera
  </div>
 
- <div id="PE_EARS">
-** eardrum peforation, bilateral patent external auditory canal
+ <div name="EARS" id="PE_4">
+ no purulent discharge, no rash
  </div>
 
- <div id="PE_NOSE">
+ <div name="NOSE" id="PE_5">
  not boggy, no nasal flaring, no epistaxis
  </div>
 
- <div id="PE_THROAT">
+ <div name="THROAT & MOUTH" id="PE_6">
  no injected throat, no oral ulcer
  </div>
 
- <div id="PE_NECK">
+ <div name="NECK" id="PE_7">
  supple, no neck stiffness, no palpable lymph node
  </div>
 
- <div id="PE_SKIN">
+ <div name="SKIN" id="PE_8">
  no rash, no superficial wound, no surgical scar
  </div>
 
- <div id="PE_CHEST">
+ <div name="CHEST & LUNGS" id="PE_9">
  Inspection: no operation scar, no deformity
  Palpation: symmetrical expansion
  Percussion: resonance, no dullness
  Auscultation: clear bilateral breathing sounds, no wheezing, no crackles, no rales
  </div>
 
- <div id="PE_HEART">
+ <div name="HEART" id="PE_10">
  regular heart beats, no murmur, no thrill, no heave
  </div>
 
- <div id="PE_ABDOMEN">
+ <div name="ABDOMEN" id="PE_11">
  Inspection: flat, no operation scar
  Auscultation: normoactive bowel sounds
  Percussion: tympanic, no dullness
  Palpation: soft, no tenderness
  </div>
 
- <div id="PE_BACK">
+ <div name="BACK & SPINE" id="PE_12">
  no knocking tenderness, no obvious scoliosis
  </div>
 
- <div id="PE_EXTREMITIES">
+ <div name="EXTREMITIES" id="PE_13">
  full range of motion, no muscle weakness, no joint tenderness, no edema
  </div>
 
- <div id="PE_NEUROLOGIC">
+ <div name="NEUROLOGIC" id="PE_14">
  General appearance: no disorientation to time, person, and place
  normal cranial nerves, normal motor functions, normal sensory functions,
  normal deep tendon reflex, normal cerebellar function, no abnormal gait
  </div>
  
- <div id="PE_DRE">
+ <div name="DRE" id="PE_15">
  not done
  </div>
 
-</div> 
+ <div name="PV+PR" id="PE_16">
+ not done
+ </div>
+
+<div name="SPECIAL" id="PE_17">
+ </div>
 
  
  <div id="IMPRESSION">
