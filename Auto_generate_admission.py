@@ -37,7 +37,6 @@ driver = webdriver.Chrome(service=service,options=chrome_options)
 username=input("帳號 : ")
 password = pwinput.pwinput(prompt='密碼: ', mask='*')
 api_key = input("api_key:")
-
 login_url = 'https://eip.vghtpe.gov.tw/login.php'  #
 driver.get(login_url)
 
@@ -69,6 +68,17 @@ prompt_text=""
 with open("Lib/admission prompt.txt", 'r',encoding="utf-8") as f:
 	# breakpoint()
 	prompt_text=prompt_text+f.read()
+
+try:
+	Age=str(admin_intro.at[0, "生　日　"])
+	breakpoint()
+	Age=Age.split("（")[1]
+	Age=Age.split("）")[0]
+	Sex=str(admin_intro.at[0, "性　別　"])
+	prompt_text=prompt_text+"Age:"+Age+"Sex"+Sex
+except:
+	pass
+
 
 try:
 	prompt_text=prompt_text+"ER note\n"
