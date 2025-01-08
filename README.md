@@ -68,7 +68,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-執行檔:[點此](https://github.com/max870121/Autogenerate-admission/raw/refs/heads/main/Auto_generate_admission_note_Ver1.zip)
+
+執行檔:[點此](https://github.com/max870121/Autogenerate-admission/raw/refs/heads/main/Auto_generate_admission_note_Ver1.1.zip)
 *** 此執行檔會使用作者的OpenAI api key，可能隨時會停止使用***
 網路爬蟲可以自動爬取資料，並使用chatGPT的API自動生成暫時存檔的住院病摘
 
