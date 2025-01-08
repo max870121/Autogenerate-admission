@@ -68,7 +68,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
+執行檔:[點此](https://github.com/max870121/Autogenerate-admission/raw/refs/heads/main/Auto_generate_admission_note_Ver1.zip)
+*** 此執行檔會使用作者的OpenAI api key，可能隨時會停止使用***
 網路爬蟲可以自動爬取資料，並使用chatGPT的API自動生成暫時存檔的住院病摘
 
 ***注意***
@@ -95,7 +96,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. . Clone the repo
    ```sh
-   git clone https://github.com/max870121/VGH_web.git
+   git clone https://github.com/max870121/Autogenerate-admission.git
    ```
 2. Install requirements.txt
    ```sh
@@ -103,7 +104,7 @@ To get a local copy up and running follow these simple example steps.
    ```
 3. Start using app
    ```sh
-   python Web_word.py
+   python Autogenerate-admission.py
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -115,7 +116,7 @@ To get a local copy up and running follow these simple example steps.
 2. 打密碼
 3. 打需要產生摘要的病歷號
 4. 打openAI 的api key
-5. 會自動暫存
+5. 會自動暫存到病歷系統
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
