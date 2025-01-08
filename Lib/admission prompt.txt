@@ -1,0 +1,462 @@
+Please write the admission note follow the Rules and Example 
+Rules:
+1. The admission note please follow the Example to have a opening tag and a closing tag of each section
+2. The tag id must be identical to the example given
+"""
+<div id="Cheif_complain">
+<div id ="PRESENT_ILLNESS">
+<div id="PAST_HISTORY">
+<div id="PERSONAL_HISTORY">
+<div id="PERINATAL_HISTORY">
+<div id="FAMILY_HISTORY">
+<div id="OBGY_HISTORY">
+<div id="IMPRESSION">
+  <div id="Plan">
+"""
+3.  Present illness must first described his or her symptoms, then write he or she was then taken to our ER for help, then described the vital sign, PE, 
+After that described lab data and image without using bullet list (first described lab data then image), The last sentence should be like this:
+"""
+Under the impression of <the impression>, he/she was admitted to our EICU for further survey and mangement.
+"""
+4. Please described Impression using bullet list starting with "."
+ . The impression must be a disease
+ . The management of the disease must be a sub-bullet list using "-" like the following:
+  """
+  . Lower abdominal pain suspected peritonitis, primary peritoneal serous carcinoma, carcinomatosis
+    - arrange diagnostic laparoscopy surgery on 2024/10/23
+  """
+5. Review of system have different tag must be identical as the following:
+"""
+<div name="GENERAL" id="ROS_1">
+<div name="HEAD" id="ROS_2">
+<div name="EYES" id="ROS_3">
+ <div name="EARS" id="ROS_4">
+<div name="NOSE" id="ROS_5">
+<div name="MOUTH" id="ROS_6">
+<div name="NECK" id="ROS_7">
+<div name="SKIN" id="ROS_8">
+<div name="RESPIRATORY" id="ROS_9">
+<div name="CARDIOVASCULAR" id="ROS_10">
+<div name="GASTROINTESTINAL"  id="ROS_11">
+<div name="GENITOURINARY" id="ROS_12">
+<div name="ENDOCRINE" id="ROS_13">
+<div name="MUSCULOSKELETAL" id="ROS_14">
+<div name="HEMATOLOGY" id="ROS_15">
+<div name="NEUROLOGY" id="ROS_16">
+<div name="PSYCHOSOCIAL" id="ROS_17">
+"""
+6. Physical examination have different tag must be identical as the following:
+"""
+<div name="GENERAL" id="PE_1">
+<div name="HEAD" id="PE_2">
+<div name="EYES" id="PE_3">
+<div name="EARS" id="PE_4">
+<div name="NOSE" id="PE_5">
+<div name="THROAT & MOUTH" id="PE_6">
+<div name="NECK" id="PE_7">
+<div name="SKIN" id="PE_8">
+<div name="CHEST & LUNGS" id="PE_9">
+<div name="HEART" id="PE_10">
+<div name="ABDOMEN" id="PE_11">
+<div name="BACK & SPINE" id="PE_12">
+<div name="EXTREMITIES" id="PE_13">
+<div name="NEUROLOGIC" id="PE_14">
+<div name="DRE" id="PE_15">
+<div name="PV+PR" id="PE_16">
+<div name="SPECIAL" id="PE_17">
+"""
+7. Plan should be like this:
+"""
+[Diagnostic plan]
+ - Monitor vital signs and clinical presentation.
+ - Followed lab if needed
+ 
+ [Therapeutic plan]
+ - empirical antibiotics
+ - correct electrolytes
+ 
+ [Educational plan]
+ - Explain current medical condition with the diagnosis, therapeutic plan, and prognosis to
+ the patient and family members.
+ 
+ [Measurable goal]
+ - Infection control
+"""
+
+======================================================================
+Giving the OPD note or ER note and Lab data as following example:
+
+Example 1:
+OPD note
+BP: 0 /0   PP: 0   BH: 158.3   BW: 0   
+S:主觀資料
+Persistent low abdominal pain
+GI doctor suggested diagnostic laparoscopy
+CAL sister's friend
+【TOCC問診資料】日期：2024/10/17
+症狀：無
+旅遊史：無
+VPN批次查詢：無批次下載資料
+職業史：無職業
+VPN批次查詢：無批次下載資料
+接觸史：無
+群聚史：否
+【TOCC END】
+
+ 
+O:客觀資料
+Never had sex
+2024-08,
+TAS: CDS fluid 24x30mm, left adnexal cystic lesion 30x26mm, LC 20x13mm
+2024-08 CT (Dr. 沈, phone): no definite Gyn condition, R/O primary
+peritonitis
+2024-08 CT: Irregular thickening of the peritonium with small amount of
+loculated ascites at pelvis and mesenteric fat strandings. Differential
+diagnosis includes primary peritoneal serous carcinoma, carcinomatosis or
+pelvic inflammatory/ disease
+2024-09 CT: Irregular thickening of the peritonium with small amount of
+loculated ascites at pelvis and mesenteric fat strandings. Differential
+diagnosis includes primary peritoneal serous carcinoma, carcinomatosis or
+pelvic inflammatory/ disease
+2024-09,
+CA125: 89.8, CA153:15.3, CA199: 4.53, CEA:<0.3
+Today,
+2024-09 CT (Dr. 沈, phone): may be primary peritoniitis, TB?, suggested
+diagnostic laparoscopy or CT guided aspiration
+Explained to patient and her mother
+
+A:診斷
+567.89  Undefine Code
+789.00  ABDOMINAL PAIN, UNSPECIFIED SITE
+ 
+K65.8  Other peritonitis
+R10.9  Unspecified abdominal pain
+ 
+P:治療計畫
+Admission for diagnostic laparoscopy
+--------------------------------------------------------------------------------
+Lab data
+BUN	    	 11  	(  )	 mg/dL 	 6~20 mg/dL 
+Na	    	 140  	(  )	 mmol/L 	 136~145 mmol/L 
+K	    	 4.1 	(  )	 mmol/L 	 3.5~5.1 mmol/L 
+Cl	   	  	(  )	  	  
+GLU	    	 94 	(  )	 mg/dL 	 65~100 mg/dL 
+Creat	 L  	 0.43 	(  )	 mg/dL 	 M:0.7~1.2; F:0.5-0.9 mg/dL 
+ALT	    	 <5 	(  )	 U/L 	 M:<41; F:<33 U/L 
+AST	 H  	 50 	(  )	 U/L 	 M:<40; F:<32 U/L 
+ALK-P	   	  	(  )	  	  
+CK	   	  	(  )	  	  
+Amylase	   	  	(  )	  	  
+CHOL	   	  	(  )	  	  
+TG	   	   	(  )	  	  
+GGT	   	  	(  )	  	  
+LDH	   	  	(  )	  	  
+T.BILI	   	   	(  )	  	  
+D.BILI	   	   	(  )	  	  
+T.Prot	   	  	(  )	  	  
+LAC	   	  	(  )	  	  
+I.P.	   	   	(  )	  	  
+Ca	   	  	(  )	  	  
+ALB	   	   	(  )	  	  
+Mg	   	  	(  )	  	  
+UA	   	   	(  )	  	  
+HDL	   	  	(  )	  	  
+CHOL/HDLC	   	   	(  )	  	  
+Lipase	   	   	(  )	  	  
+NH3	   	   	(  )	  	  
+sALC	   	  	(  )	  	  
+CRP	    	 0.17  	(  )	 mg/dL 	 <0.5 mg/dL 
+WBC	    	4320 	(  )	 /uL 	 4180 ~ 9380 
+RBC	    	4.86 	(  )	 10^6/uL 	 3.80 ~ 5.10 
+Hb	    	11.1 	(  )	 g/dL 	 10.9 ~ 15.6 
+Hct	    	34.6 	(  )	 % 	 33.4 ~ 45.5 
+MCV	 L  	71.2 	(  )	 fL 	 82.0 ~ 97.7 
+MCH	 L  	22.8 	(  )	 pg 	 27.6 ~ 33.0 
+MCHC	    	32.1 	(  )	 g/dL 	 32.0 ~ 35.2 
+RDW-CV	    	13.0 	(  )	 % 	 11.8 ~ 14.6 
+Plt	    	222000 	(  )	 /uL 	 145000 ~ 383000 
+ANC	 L  	1862 	(  )	 /uL 	 1890 ~ 6760 
+DC :%	 	 	 	 	 
+Band	    	0.0 	(  )	 % 	 0 ~ 5 
+Neu.	 L  	43.1 	(  )	 % 	 45.0 ~ 81.2 
+Lym.	 H  	50.0 	(  )	 % 	 13.0 ~ 45.5 
+Mono.	    	6.9 	(  )	 % 	 3.7 ~ 8.8 
+Eos.	 L  	0.0 	(  )	 % 	 0.2 ~ 6.6 
+Baso.	 L  	0.0 	(  )	 % 	 0.1 ~ 1.6 
+
+CXR:
+CHEST PA VIEW 
+ Date Of Examination:2024/09/12 22:33:07 
+ Date Of RCP:2024/09/12 
+  
+ > Clear bilateral costophrenic angles. 
+ > Borderline heart size. 
+ > Patchy infiltration noted over bilateral lung fields,
+inflammatory process is firstly considered. Space occupying
+lesions may be obscured. 
+
+-------------------------------------------------------------------------------------------
+Admission note 
+
+<div id="Cheif_complain">
+Lower abdominal pain noted for 4 months.
+</div>
+ 
+ <div id ="PRESENT_ILLNESS">
+ This 25-year-old woman with no systemic disease
+ 
+ According to the patient, she has a gynecological history of no sex experience. Her menarc
+ he was at 13 years old and last menstrual period was 2024/10/5. She has a regular menstrua
+ l cycle (duration/interval: 30/5-6 days) with dysmenorrhea and menorrhagia. She was not re
+ ceiving hormone replacement therapy or other medication.
+ 
+ She had been in her usual health until 4 months ago, when lower abdominal pain noted devel
+ oped. Intermittent diarrhea was also noted. She came to our outpatient department for help
+ on 2024/08, CT scan was arranged and showed irregular thickening of the peritonium with s
+ mall amount of loculated ascites at pelvis and mesenteric fat strandings. Differential dia
+ gnosis includes primary peritoneal serous carcinoma, carcinomatosis or pelvic inflammatory
+ / disease. Follow-up CT scans in 2024/09 demonstrated irregular thickening of the peritone
+ um with loculated ascites and mesenteric fat strandings, raising concerns for primary peri
+ toneal serous carcinoma, carcinomatosis, or pelvic inflammatory disease. Laboratory result
+ s show an elevated CA125 level of 89.5, indicating possible peritoneal involvement. Diagno
+ stic laparoscopy was suggested.
+ 
+ After shared decision making, she decided to undergo the surgery. Upon admission, she was
+ stable. She denied, fever, loss of appetite, or recent bleeding. Under the tentative diag
+ nosis of abdominal pain suspected peritonitis, primary peritoneal serous carcinoma, carcin
+ omatosis, she was admitted for further management.
+ </div>
+
+ 
+<div id="PAST_HISTORY">
+ Nil
+</div> 
+
+<div id="PERSONAL_HISTORY">
+ Alcohol: denied
+ Betel nut: denied
+ Cigarette: denied
+ Drug allergy: denied
+ Food allergy: denied
+ Blood transfusion reaction: denied
+</div> 
+
+<div id="PERINATAL_HISTORY">
+ Nil
+</div> 
+
+<div id="FAMILY_HISTORY">
+ She denied relevant family history in three generations.
+</div> 
+
+<div id="OBGY_HISTORY">
+ Sex experience(-),
+ Regular, D/I 5-6 days/ 28 days dysmenorrhea(+), menorrhagia(+)
+ Hormone replacement therapy(-)
+</div>
+
+ <div name="GENERAL" id="ROS_1">
+ no body weight loss , no body weight gain , no fatigue , no weakness ,
+ no fever , no poor appetite , no chills
+ </div>
+ 
+ <div name="HEAD" id="ROS_2">
+ no trauma , no headache , no dizziness
+ </div>
+
+ <div name="EYES" id="ROS_3">
+ no glasses , no blurring
+ </div>
+ 
+ <div name="EARS" id="ROS_4">
+ no tinnitus , no otalgia , no otorrhea , no vertigo ,
+ no history of ear infections , no hearing impairment
+ </div>
+ 
+ <div name="NOSE" id="ROS_5">
+ no epistaxis , no nasal obstruction , no sinus problems ,
+ no sense of smell loss , no rhinorrhea
+ </div>
+
+ <div name="MOUTH" id="ROS_6">
+ no bleeding gums , no voice change , no swallowing disturbance ,
+ no pain over the oral cavity and tongue ,
+ no ulcerations over buccal mucosa
+
+ </div>
+ <div name="NECK" id="ROS_7">
+ no pain over the neck , no neck stiffness
+ </div>
+
+ <div name="SKIN" id="ROS_8">
+ no rashes , no pruritus , no bruising , no dryness , no itching ,
+ no hair loss , no skin cancer , no cyanosis , no atrophy , no bullae fotmation
+ </div>
+
+ <div name="RESPIRATORY" id="ROS_9">
+ no chest pain , no sneezing , no dyspnea , no night sweats ,
+ no cough , no hemoptysis , no expectoration
+ </div>
+
+ <div name="CARDIOVASCULAR" id="ROS_10">
+ no intermittent claudication , no varicose vein ,
+ no history of MI(Myocardial Infarction) , no orthopnea ,
+ no exertional dyspnea , no palpitation , no chest tightness ,
+ no coldness of Limbs , no syncope , no fainting , no chest pain ,
+ no peripheral edema , no paroxysmal noctural dyspnea
+ </div>
+
+ <div name="GASTROINTESTINAL"  id="ROS_11">
+ no dysphagia , no heart burn , no nausea , no acid regurgitation ,
+ no vomiting , no hematemesis , no indigestion ,
+ no diarrhea , no constipation , no melena , no clay-color stool ,
+ no hiccup , no difficult swallowing , no epigastric discomfort ,
+ no hemorrhoids , no intolerance for greasy food ,
+ no change of bowel habit , *** mild abdominal pain , no tenesmus
+ <div>
+
+ <div name="GENITOURINARY" id="ROS_12">
+ no venereal disease , no frequency , no dribbling ,
+ no urgency , no hesitancy , no dysuria , no hematuria ,
+ no polyuria , no nocturia , no incontinence ,
+ no discharge , no sterility
+ </div>
+
+ <div name="ENDOCRINE" id="ROS_13">
+ no polyuria , no polydipsia , no loss of body weight , no weight gain ,
+ no polyphagia , no hormone therapy , no loss of libido , no tremor ,
+ no heat intolerance , no abnormal growth, no growth retardation ,
+ no proptosis
+ </div>
+
+ <div name="MUSCULOSKELETAL" id="ROS_14">
+ no trauma , no arthralgia , no twitching , no myalgia ,
+ no tenderness , no back pain , no morning joint stiffness ,
+ no numbness , no joint swelling , no muscle soreness
+ </div>
+
+ <div name="HEMATOLOGY" id="ROS_15">
+ no bleeding tendency , no gum bleeding , no anemia ,
+ no easy bruising
+ </div>
+
+ <div name="NEUROLOGY" id="ROS_16">
+ no seizure , no syncope , no weakness , no mood swing , normal ,
+ no memory loss , no sleep disturbance , no paresthesia , no slurring speech ,
+ no emotional disturbance , no drug and alcohol problems
+ </div>
+<div name="PSYCHOSOCIAL" id="ROS_17">
+ no sleep disturbance , no mood swing , no abnormal speech ,
+ no abnormal behavior , no thought disturbance ,
+ no perception disturbance , no disorientation to time , place and person ,
+ no intellectual function disturbance , calculation is normal ,
+ no suicide problem , no drug or alcohol problem
+ </div>
+ 
+ <div name="GENERAL" id="PE_1">
+ normal appearance, alert and oriented
+ Consciousness: E4V5M6
+ </div>
+
+ <div name="HEAD" id="PE_2">
+ no superficial wound, no deformity, no bruising
+ </div>
+
+ <div name="EYES" id="PE_3">
+ no pale conjunctiva, no icteric sclera
+ </div>
+
+ <div name="EARS" id="PE_4">
+ no purulent discharge, no rash
+ </div>
+
+ <div name="NOSE" id="PE_5">
+ not boggy, no nasal flaring, no epistaxis
+ </div>
+
+ <div name="THROAT & MOUTH" id="PE_6">
+ no injected throat, no oral ulcer
+ </div>
+
+ <div name="NECK" id="PE_7">
+ supple, no neck stiffness, no palpable lymph node
+ </div>
+
+ <div name="SKIN" id="PE_8">
+ no rash, no superficial wound, no surgical scar
+ </div>
+
+ <div name="CHEST & LUNGS" id="PE_9">
+ Inspection: no operation scar, no deformity
+ Palpation: symmetrical expansion
+ Percussion: resonance, no dullness
+ Auscultation: clear bilateral breathing sounds, no wheezing, no crackles, no rales
+ </div>
+
+ <div name="HEART" id="PE_10">
+ regular heart beats, no murmur, no thrill, no heave
+ </div>
+
+ <div name="ABDOMEN" id="PE_11">
+ Inspection: flat, no operation scar
+ Auscultation: normoactive bowel sounds
+ Percussion: tympanic, no dullness
+ Palpation: soft, no tenderness
+ </div>
+
+ <div name="BACK & SPINE" id="PE_12">
+ no knocking tenderness, no obvious scoliosis
+ </div>
+
+ <div name="EXTREMITIES" id="PE_13">
+ full range of motion, no muscle weakness, no joint tenderness, no edema
+ </div>
+
+ <div name="NEUROLOGIC" id="PE_14">
+ General appearance: no disorientation to time, person, and place
+ normal cranial nerves, normal motor functions, normal sensory functions,
+ normal deep tendon reflex, normal cerebellar function, no abnormal gait
+ </div>
+ 
+ <div name="DRE" id="PE_15">
+ not done
+ </div>
+
+ <div name="PV+PR" id="PE_16">
+Vulva: normal appearance
+Vagina: normal rugae
+Cervix: smooth/absent with smooth cuff
+ </div>
+
+<div name="SPECIAL" id="PE_17">
+ </div>
+
+ <div id="IMPRESSION">
+ . Lower abdominal pain suspected peritonitis, primary peritoneal serous carcinoma, carcinomatosis
+    - arrange diagnostic laparoscopy surgery on 2024/10/23
+ </div>
+
+ <div id="Plan">
+ [Diagnostic]
+ . Monitor vital signs and clinical condition
+ . General survey including hemogram, biochemistry profile, and coagulation functions
+ . Chest X-ray and follow-up image studies if indicated
+ . Pre-operative survey including electrocardiogram and chest X-ray
+ 
+ [Therapeutic]
+ . Keep outpatient clinic medication for underlying diseases
+ . Arrange diagnostic laparoscopy surgery on 2024/10/23
+ 
+ [Educational]
+ . Well informed the current condition and future plans to the patient / family
+ 
+ [Holistic care]
+ 全人︰同理病人之感受，說明病情並給予心理支持。
+ 全家：對病人之家屬解釋病人病情並給予心理支持。
+ 全程：說明並安排住院之治療，給予衛教；安排出院後可接軌之照顧，包括回診或居家照護轉介。
+ 全隊：臨床有需要時諮詢營養師、社工師、職能治療師；提供病人跨專科跨團隊之照護。
+ 全社區︰為病人尋求可利用之社區照護資源。
+ </div>
+
+=============================================================================
+Here is the ER note or OPD note and Lab data please generate the admission note that like the example is given:
