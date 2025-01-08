@@ -31,7 +31,7 @@ chrome_options.add_argument("--headless=new")  # 如果不需要顯示瀏覽器�
 chrome_options.add_argument("--window-position=-2400,-2400")
 chrome_options.add_argument('--log-level=3')
 
-service = Service(executable_path=r'chromedriver.exe')
+service = Service(executable_path=r'Lib/chromedriver.exe')
 driver = webdriver.Chrome(service=service,options=chrome_options)
 
 username=input("帳號 : ")
@@ -57,17 +57,16 @@ soup = BeautifulSoup(driver.page_source, 'html.parser')
 
 
 
-# patID=input("病歷號:")
+patID=input("病歷號:")
 admin_intro=get_admin_Intro(driver,patID)
 VS=str(admin_intro.at[0, "主治醫師"])
 VS=VS.split("(")[0]
 print(VS)
-# patID="50324317"
 
 
 prompt_text=""
 
-with open("admission prompt.txt", 'r',encoding="utf-8") as f:
+with open("Lib/admission prompt.txt", 'r',encoding="utf-8") as f:
 	# breakpoint()
 	prompt_text=prompt_text+f.read()
 
