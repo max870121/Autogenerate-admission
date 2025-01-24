@@ -23,7 +23,7 @@ from datetime import datetime, timedelta
 import pwinput
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-
+import pathlib
 # 配置 WebDriver
 chrome_options = Options()
 chrome_options.headless = True
@@ -32,6 +32,15 @@ chrome_options.add_argument("--window-position=-2400,-2400")
 chrome_options.add_argument('--log-level=3')
 
 service = Service(executable_path=r'Lib/chromedriver.exe')
+
+download_path=str(pathlib.Path(__file__).parent.resolve())
+chrome_options.add_experimental_option('prefs', {
+"download.default_directory": download_path, #Change default directory for downloads
+"download.prompt_for_download": False, #To auto download the file
+"download.directory_upgrade": True,
+"plugins.always_open_pdf_externally": True #It will not show PDF directly in chrome
+})
+
 driver = webdriver.Chrome(service=service,options=chrome_options)
 
 username=input("帳號 : ")
@@ -56,7 +65,12 @@ soup = BeautifulSoup(driver.page_source, 'html.parser')
 
 
 
+
 patID=input("病歷號:")
+
+
+nurse_note=get_nurse_note(driver, patID)
+breakpoint()
 admin_intro=get_admin_Intro(driver,patID)
 VS=str(admin_intro.at[0, "主治醫師"])
 VS=VS.split("(")[0]
@@ -71,7 +85,6 @@ with open("Lib/admission prompt.txt", 'r',encoding="utf-8") as f:
 
 try:
 	Age=str(admin_intro.at[0, "生　日　"])
-	breakpoint()
 	Age=Age.split("（")[1]
 	Age=Age.split("）")[0]
 	Sex=str(admin_intro.at[0, "性　別　"])
@@ -93,7 +106,7 @@ except:
 prompt_text=prompt_text+"-----------------------------------------------------------------------------------\n"
 
 time.sleep(3*random.random())
-report_num=10
+report_num=30
 report_name,recent_report=get_recent_report(driver, patID, report_num=report_num)
 for i in range(len(report_name)):
 	try:
