@@ -38,3 +38,4 @@ tzdata==2024.2
 urllib3==2.2.3
 websocket-client==1.8.0
 wsproto==1.2.0
+pdfplumber ==0.11.5
