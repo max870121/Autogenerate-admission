@@ -459,8 +459,25 @@ def get_nurse_note(driver, ID, keyword="轉出摘要"):
         if keyword in a_note[3]:
             return "日期:"+a_note[0]+"\n"+a_note[3]
 
-    return "日期:"+nurse_note[0][0]+"\n"+nurse_note[4][3]
+    return "日期:"+nurse_note[0][0]+"\n"+nurse_note[0][3]
     # soup = BeautifulSoup(driver.page_source, 'html.parser')
     # soup=soup.find(id="divshow_0")
     # IOtable=soup.table.table.findAll('table')[1]
-    # df=html_IO_table(IOtable)
+    # df=html_IO_table(IOtable).
+
+#==================================
+def get_last_discharge(driver,ID):
+    driver.get("https://web9.vghtpe.gov.tw/emr/qemr/qemr.cfm?action=findDis&histno="+ID)
+    soup = BeautifulSoup(driver.page_source, 'html.parser')
+    dis_note = soup.find(title="disdetail")
+    root_url="https://web9.vghtpe.gov.tw/"
+    dis_url=root_url+dis_note['href']
+    time.sleep(0.5)
+    driver.get(dis_url)
+    soup = BeautifulSoup(driver.page_source, 'html.parser')
+    dis_note=soup.pre.text
+    dis_note=dis_note.split("入院診斷：")[1]
+    dis_note="入院診斷：\n"+dis_note
+    dis_note=dis_note.split("主治醫師")[0]
+
+    return dis_note

@@ -68,8 +68,6 @@ soup = BeautifulSoup(driver.page_source, 'html.parser')
 
 patID=input("病歷號:")
 
-
-
 admin_intro=get_admin_Intro(driver,patID)
 VS=str(admin_intro.at[0, "主治醫師"])
 VS=VS.split("(")[0]
@@ -106,12 +104,17 @@ prompt_text=prompt_text+"-------------------------------------------------------
 
 try:
 	nurse_note=get_nurse_note(driver, patID)
-	prompt_text=prompt_text+nurse_note+"\n"
+	prompt_text=prompt_text+"護理紀錄\n"++nurse_note+"\n"
 	prompt_text=prompt_text+"\n-----------------------------------------------------------------------------------\n"
 except:
 	pass
 
-
+try:
+	dis_note=get_last_discharge(driver,patID)
+	prompt_text=prompt_text+"The patient's last discharged note\n"+dis_note+"\n"
+	prompt_text=prompt_text+"\n-----------------------------------------------------------------------------------\n"
+except:
+	pass
 
 # try:
 # 	nurse_note=get_nurse_note(driver, patID)
