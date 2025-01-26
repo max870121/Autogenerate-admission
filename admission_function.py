@@ -433,31 +433,34 @@ def get_OPD(driver, ID, VS):
             return table_body.text
 
 #=================================================
-def get_nurse_note(driver, ID):
+def get_nurse_note(driver, ID, keyword="轉出摘要"):
     adminID=get_adminID(driver,ID)
     driver.get("https://web9.vghtpe.gov.tw/emr/qemr/qemr.cfm?action=goNIS&hisid="+ID+"&caseno="+adminID)
     date=(datetime.now() - timedelta(1)).strftime('%Y%m%d')
     driver.get("https://web9.vghtpe.gov.tw/NIS/report/ProgressNote/pdf.do")
     time.sleep(2)
-    breakpoint()
+    # breakpoint()
     
     with pdfplumber.open('ProgressNote.pdf') as pdf:
     # 假設我們要處理所有頁面的表格
-        all_table_data = []
+        nurse_note = []
         
         for page in pdf.pages:
-            # 提取表格
             tables = page.extract_tables()
-            
             for table in tables:
-                # 將每一頁的表格添加到 all_table_data
-                all_table_data.append(table)
-        
+                for idx, row in enumerate(table):
+                    if idx>3:
+                        nurse_note.append(row)
         # 顯示表格內容
-        
+    
     os.remove('ProgressNote.pdf')
+
+    for a_note in nurse_note:
+        if keyword in a_note[3]:
+            return "日期:"+a_note[0]+"\n"+a_note[3]
+
+    return "日期:"+nurse_note[0][0]+"\n"+nurse_note[4][3]
     # soup = BeautifulSoup(driver.page_source, 'html.parser')
     # soup=soup.find(id="divshow_0")
     # IOtable=soup.table.table.findAll('table')[1]
     # df=html_IO_table(IOtable)
-    return all_table_data

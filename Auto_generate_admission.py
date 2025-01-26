@@ -69,8 +69,7 @@ soup = BeautifulSoup(driver.page_source, 'html.parser')
 patID=input("病歷號:")
 
 
-nurse_note=get_nurse_note(driver, patID)
-breakpoint()
+
 admin_intro=get_admin_Intro(driver,patID)
 VS=str(admin_intro.at[0, "主治醫師"])
 VS=VS.split("(")[0]
@@ -105,6 +104,22 @@ except:
 
 prompt_text=prompt_text+"-----------------------------------------------------------------------------------\n"
 
+try:
+	nurse_note=get_nurse_note(driver, patID)
+	prompt_text=prompt_text+nurse_note+"\n"
+	prompt_text=prompt_text+"\n-----------------------------------------------------------------------------------\n"
+except:
+	pass
+
+
+
+# try:
+# 	nurse_note=get_nurse_note(driver, patID)
+# 	prompt_text=prompt_text+nurse_note
+# 	prompt_text=prompt_text+"\n-----------------------------------------------------------------------------------\n"
+# except:
+# 	pass
+
 time.sleep(3*random.random())
 report_num=30
 report_name,recent_report=get_recent_report(driver, patID, report_num=report_num)
@@ -122,6 +137,7 @@ path="prompt.txt"
 with open(path, 'w',encoding="utf-8") as f:
 	f.write(prompt_text)
 
+print("請稍等，chatGPT 正在產生病歷當中...")
 from openai import OpenAI
 
 client = OpenAI(api_key = api_key)
@@ -142,10 +158,12 @@ completion = client.chat.completions.create(
 replied_text=completion.choices[0].message.content
 
 print(replied_text)
+
 # breakpoint()
 path="Replied.html"
 with open(path, 'w',encoding="utf-8") as f:
 	f.write(replied_text)
+print("已產生好病歷，並且儲存為Replied.html，正在回填當中")
 
 soup = BeautifulSoup(replied_text, 'html.parser')
 
