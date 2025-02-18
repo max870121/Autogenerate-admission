@@ -455,11 +455,11 @@ def get_nurse_note(driver, ID, keyword="轉出摘要"):
     
     os.remove('ProgressNote.pdf')
 
+    output_nurse_note=""
     for a_note in nurse_note:
-        if keyword in a_note[3]:
-            return "日期:"+a_note[0]+"\n"+a_note[3]
+        output_nurse_note=output_nurse_note+"日期:"+a_note[0]+"\n"+a_note[3]+"\n"
 
-    return "日期:"+nurse_note[0][0]+"\n"+nurse_note[0][3]
+    return output_nurse_note
     # soup = BeautifulSoup(driver.page_source, 'html.parser')
     # soup=soup.find(id="divshow_0")
     # IOtable=soup.table.table.findAll('table')[1]

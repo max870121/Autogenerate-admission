@@ -13,11 +13,18 @@ Rules:
 <div id="IMPRESSION">
   <div id="Plan">
 """
-3.  Present illness must first described his or her symptoms, then write he or she was then taken to our ER for help, then described the vital sign, PE, 
-After that described lab data and image without using bullet list (first described lab data then image), The last sentence should be like this:
-"""
-Under the impression of <the impression>, he/she was admitted to our EICU for further survey and mangement.
-"""
+3.  Present illness must follow this rule and order
+     3.1 Described the patient's age and sex (using article)
+     3.2 Past history (Copy and paste the patient's last discharge note)(using bullet list)
+     3.3 The patients symptoms or why they came to see doctor (using article)
+     3.4 Write he/she was then taken to ER/OPD for help, (continue article)
+     3.5 Then described the vital sign, PE(continue article)
+     3.6 Described lab data and image without using bullet list (first described lab data then image)
+     3.7 The last sentence should be like this:
+      """
+      Under the impression of <the impression>, he/she was admitted to our ward for further survey and mangement.
+      """
+
 4. Please described Impression using bullet list starting with "."
  . The impression must be a disease
  . The management of the disease must be a sub-bullet list using "-" like the following:
@@ -69,22 +76,22 @@ Under the impression of <the impression>, he/she was admitted to our EICU for fu
 """
 [Diagnostic plan]
  - Monitor vital signs and clinical presentation.
- - Followed lab if needed
+ - Pre-op survey
  
  [Therapeutic plan]
- - empirical antibiotics
- - correct electrolytes
+ - Arrange operation if no contraindication
+- post-op care
  
  [Educational plan]
- - Explain current medical condition with the diagnosis, therapeutic plan, and prognosis to
+ - Explain the risk benifit of the surgery, current medical condition with the diagnosis, therapeutic plan, and prognosis to
  the patient and family members.
  
  [Measurable goal]
- - Infection control
+ - Complete surgery
 """
 
 ======================================================================
-Giving the OPD note or ER note and Lab data as following example:
+Giving the OPD note or ER note and Nurse note and Lab data as following example:
 
 Example 1:
 OPD note
