@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Report Generator</title>
+    <title>Admission note generator</title>
     <!-- Bootstrap 4 CDN -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
 </head>
 <body>
     <div class="container mt-5">
         <h1 class="text-center">Admission note generator</h1>
-        <p class="text-center">Please fill out the form below to generate a admission note.</p>
+        <p class="text-center">Please fill out the form below to generate an admission note.</p>
         
-        <form action="/generate_report/" method="post">
+        <form action="/generate_report/" method="post" id="generateReportForm">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" class="form-control" id="username" name="username" required>
@@ -39,11 +38,84 @@
             </div>
             <button type="submit" class="btn btn-primary btn-block">Generate Report</button>
         </form>
+
+        <!-- Loading Spinner -->
+        <div id="loading" style="display: none;" class="text-center mt-3">
+            <img src="https://i.gifer.com/YCZH.gif" alt="loading...">
+            <p id="loadingMessage"></p>
+        </div>
+
+        <!-- Task Status Message -->
+        <div id="taskStatusMessage" class="mt-3 text-center" style="display: none;">
+            <p id="statusMessage"></p>
+        </div>
     </div>
 
     <!-- Bootstrap 4 and jQuery CDN for form submission handling -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Handle the form submission
+        $('#generateReportForm').submit(function(event) {
+            event.preventDefault();  // Prevent default form submission
+            var patientId = $('#patient_id').val()
+            // Show the loading spinner
+            $('#loading').show();
+            $('#taskStatusMessage').hide();
+            $('#loadingMessage').text('Processing' + patientId +'\'s admission note ');
+
+            // Send the form data using AJAX
+            $.ajax({
+                type: 'POST',
+                url: '/generate_report/',
+                data: $(this).serialize(),
+                success: function(response) {
+                    // After submitting the form, get the task_id from the response
+                    var taskId = response.task_id;
+                    // Start polling the task status every 2 seconds
+                    checkTaskStatus(taskId);
+                },
+                error: function() {
+                    $('#loading').hide();
+                    $('#taskStatusMessage').show();
+                    $('#statusMessage').text('Error submitting the form. Please try again.');
+                }
+            });
+        });
+
+        // Function to check the status of the task
+        function checkTaskStatus(taskId) {
+            $.ajax({
+                type: 'GET',
+                url: `/task_status/${taskId}`,
+                success: function(response) {
+                    var status = response.status;
+                    var patientId = $('#patient_id').val()
+
+                    if (status[0] === "Completed") {
+                        $('#loading').hide();
+                        $('#taskStatusMessage').show();
+                        $('#statusMessage').html(status[1]);
+                    } else if (status === "Failed") {
+                        $('#loading').hide();
+                        $('#taskStatusMessage').show();
+                        $('#statusMessage').text('Task failed. Please try again.');
+                    } else {
+                        // Continue polling every 2 seconds if the task is still in progress
+                        setTimeout(function() {
+                            checkTaskStatus(taskId);
+                        }, 2000);
+                    }
+                },
+                error: function() {
+                    $('#loading').hide();
+                    $('#taskStatusMessage').show();
+                    $('#statusMessage').text('Error checking task status. Please try again.');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
