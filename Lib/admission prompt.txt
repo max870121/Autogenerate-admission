@@ -24,6 +24,16 @@ Rules:
       """
       Under the impression of <the impression>, he/she was admitted to our ward for further survey and mangement.
       """
+     3.8 Here is the example of present illness:
+     """
+    This 57-year-old man with underlying of:
+    . HTN
+    . DM
+    . Dyslipidemia
+    . COPD on Spiriva
+    . Deviated nasal septum and chronic hypertrophic rhinitis s/p septomeatoplasty on 2018/01/10.
+
+     According to the patient,  he reported smoking history includes 1 pack per day for over 40 years. He reported that he fell down on 2025/1 and went to LMD's ER for help. Rib fracture was noted. Chest CT on 2025/01/22 was arranged and showed left 6th rib fx, 2.1cm irregular thick wall over LLL, suspected cavitating malignancy(3/63-68). 3mm juxtapleural nodule over left major fissue(3/62). He follow up at OPD where EBUS was arranged and was performed on 2025/02/04, but the EBUS was negative. He was then went to our OPD for second opinion, CT guide biopsy or surgery was suggested. After discussed with patient, he decided to underwent surgery. Under the impression of lung nodule at LLL, he was admitted to our ward for further survey and management. 
 
 4. Please described Impression using bullet list starting with "."
  . The impression must be a disease
@@ -32,6 +42,8 @@ Rules:
   . Lower abdominal pain suspected peritonitis, primary peritoneal serous carcinoma, carcinomatosis
     - arrange diagnostic laparoscopy surgery on 2024/10/23
   """
+
+
 5. Review of system have different tag must be identical as the following:
 """
 <div name="GENERAL" id="ROS_1">
