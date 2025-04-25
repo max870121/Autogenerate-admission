@@ -43,6 +43,9 @@ chrome_options.add_experimental_option('prefs', {
     "plugins.always_open_pdf_externally": True
 })
 
+
+
+
 # Define background task to handle the web scraping and report generation
 def process_medical_report(username: str, password: str, api_key: str, patient_id: str, OPD_or_ER: str,task_id: str):
     service = webdriver.chrome.service.Service(service_args=['--log-level=OFF'], log_output=subprocess.STDOUT)
@@ -110,15 +113,16 @@ def process_medical_report(username: str, password: str, api_key: str, patient_i
             pass
 
         try:
-            dis_note=get_last_discharge(driver,patient_id)
-            prompt_text=prompt_text+"The patient's last discharged note\n"+dis_note+"\n"
-            prompt_text=prompt_text+"\n-----------------------------------------------------------------------------------\n"
+            pass
+            # dis_note=get_last_discharge(driver,patient_id)
+            # prompt_text=prompt_text+"The patient's last discharged note\n"+dis_note+"\n"
+            # prompt_text=prompt_text+"\n-----------------------------------------------------------------------------------\n"
         except:
             pass
 
 
         time.sleep(3*random.random())
-        report_num=20
+        report_num=1
         report_name,recent_report=get_recent_report(driver, patient_id, report_num=report_num)
         for i in range(len(report_name)):
             try:
@@ -130,26 +134,39 @@ def process_medical_report(username: str, password: str, api_key: str, patient_i
         print("complete getting data")
 
         # Send data to OpenAI API for report generation
-        try:
-            client = OpenAI(api_key=api_key)
-            completion = client.chat.completions.create(
-                model="gpt-4o-mini",
-                messages=[{
-                    "role": "system", 
-                    "content": "You are a resident doctor, who needs to write admission notes based on ER or OPD notes."
-                }, {
-                    "role": "user", 
-                    "content": prompt_text
-                }]
-            )
-            replied_text = completion.choices[0].message.content
+        # try:
+        #     client = OpenAI(api_key="")
+        #     completion = client.chat.completions.create(
+        #         model="gpt-4o-mini",
+        #         messages=[{
+        #             "role": "system", 
+        #             "content": "You are a resident doctor, who needs to write admission notes based on ER or OPD notes."
+        #         }, {
+        #             "role": "user", 
+        #             "content": prompt_text
+        #         }]
+        #     )
+        #     replied_text = completion.choices[0].message.content
 
-            # Save and process the reply
-            path = "Replied.html"
-            with open(path, 'w', encoding="utf-8") as f:
-                f.write(replied_text)
-        except:
-            print("wrong api key")
+        #     # Save and process the reply
+        #     path = "Replied.html"
+        #     with open(path, 'w', encoding="utf-8") as f:
+        #         f.write(replied_text)
+        # except:
+        #     print("wrong api key")
+        import requests
+        data={
+            "prompt":prompt_text,
+            "max_length":100,
+            "temperature":0.7
+        }
+        # print(data)
+        url="http://120.126.105.207:8080/generate"
+        response=requests.post(url, json=data)
+        
+        if response.status_code==200:
+            replied_text=response.json()['response']
+            print(replied_text)
 
         # Further actions for saving the report or updating the medical system would go here
         try:
@@ -266,14 +283,15 @@ async def task_status(task_id: str):
         raise HTTPException(status_code=404, detail="Task not found.")
     return {"task_id": task_id, "status": status}
 
-
-@app.get("/task_status/{task_id}")
-async def task_status(task_id: str):
+@app.get("/Admission_note/{task_id}")
+async def admission_note(request: Request, task_id: str):
     # 查詢任務的狀態
     status = task_status_dict.get(task_id)
+    print(task_status_dict)
     if not status:
         raise HTTPException(status_code=404, detail="Task not found.")
-    return {"task_id": task_id, "status": status}
+    return HTMLResponse(content=status[1], status_code=200)
+
 
 # Serve the HTML form from a separate template file
 @app.get("/", response_class=HTMLResponse)

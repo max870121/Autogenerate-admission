@@ -9,45 +9,49 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center">Admission note generator</h1>
-        <p class="text-center">Please fill out the form below to generate an admission note.</p>
+        <h1 class="text-center">Admission Note Generator</h1>
+        <p class="text-center">Please fill out the form on the left to generate an admission note. The right side will show patient statuses.</p>
         
-        <form action="/generate_report/" method="post" id="generateReportForm">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" name="username" required>
+        <div class="row">
+            <!-- 左側：表單輸入 -->
+            <div class="col-md-6">
+                <form action="/generate_report/" method="post" id="generateReportForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <div hidden class="form-group">
+                        <label for="api_key">API Key</label>
+                        <input type="text" class="form-control" id="api_key" name="api_key" required value="None">
+                    </div>
+                    <div class="form-group">
+                        <label for="patient_id">Patient ID</label>
+                        <input type="text" class="form-control" id="patient_id" name="patient_id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="OPD_or_ER">OPD or ER</label>
+                        <select class="form-control" id="OPD_or_ER" name="OPD_or_ER" required>
+                            <option value="OPD">OPD</option>
+                            <option value="ER">ER</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Generate Report</button>
+                </form>
+    
+                <!-- Loading Spinner -->
+                
             </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" name="password" required>
+    
+            <!-- 右側：病人狀態顯示 -->
+            <div class="col-md-6">
+                <div id="patientStatusContainer">
+                    
+                </div>
             </div>
-            <div class="form-group">
-                <label for="api_key">API Key</label>
-                <input type="text" class="form-control" id="api_key" name="api_key" required>
-            </div>
-            <div class="form-group">
-                <label for="patient_id">Patient ID</label>
-                <input type="text" class="form-control" id="patient_id" name="patient_id" required>
-            </div>
-            <div class="form-group">
-                <label for="OPD_or_ER">OPD or ER</label>
-                <select class="form-control" id="OPD_or_ER" name="OPD_or_ER" required>
-                    <option value="OPD">OPD</option>
-                    <option value="ER">ER</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Generate Report</button>
-        </form>
-
-        <!-- Loading Spinner -->
-        <div id="loading" style="display: none;" class="text-center mt-3">
-            <img src="https://i.gifer.com/YCZH.gif" alt="loading...">
-            <p id="loadingMessage"></p>
-        </div>
-
-        <!-- Task Status Message -->
-        <div id="taskStatusMessage" class="mt-3 text-center" style="display: none;">
-            <p id="statusMessage"></p>
         </div>
     </div>
 
@@ -60,11 +64,24 @@
         // Handle the form submission
         $('#generateReportForm').submit(function(event) {
             event.preventDefault();  // Prevent default form submission
-            var patientId = $('#patient_id').val()
+            var patientId = $('#patient_id').val();
             // Show the loading spinner
-            $('#loading').show();
-            $('#taskStatusMessage').hide();
-            $('#loadingMessage').text('Processing' + patientId +'\'s admission note ');
+            $('#patientStatusContainer').append(`
+                <div class="card mb-2" id="status-card-${patientId}">
+                    <div class="card-body">
+                        <h5 class="card-title">Patient ID: ${patientId}</h5>
+                            <div id="loading-${patientId}" class="text-center mt-3">
+                                <img src="https://i.gifer.com/YCZH.gif" alt="loading...">
+                                <p id="loadingMessage"></p>
+                            </div>
+
+                        <!-- Task Status Message -->
+                        <div id="status-text" class="mt-3 text-center">
+                            <p id="status-text-${patientId}"></p>
+                        </div>
+                    </div>
+                </div>
+            `);
 
             // Send the form data using AJAX
             $.ajax({
@@ -75,7 +92,7 @@
                     // After submitting the form, get the task_id from the response
                     var taskId = response.task_id;
                     // Start polling the task status every 2 seconds
-                    checkTaskStatus(taskId);
+                    checkTaskStatus(taskId, patientId);
                 },
                 error: function() {
                     $('#loading').hide();
@@ -86,36 +103,37 @@
         });
 
         // Function to check the status of the task
-        function checkTaskStatus(taskId) {
+        function checkTaskStatus(taskId, patientId) {
             $.ajax({
                 type: 'GET',
                 url: `/task_status/${taskId}`,
                 success: function(response) {
                     var status = response.status;
-                    var patientId = $('#patient_id').val()
-
+                    var Status_text='#status-text-'.concat(patientId);
+                    var loading='#loading-'.concat(patientId);
                     if (status[0] === "Completed") {
-                        $('#loading').hide();
-                        $('#taskStatusMessage').show();
-                        $('#statusMessage').html(status[1]);
+                        $(loading).hide();
+                        
+                        $(Status_text).show();
+                        $(Status_text).append(`<a href="/Admission_note/${taskId}"  target="_blank">Admission note</a>`);
                     } else if (status === "Failed") {
-                        $('#loading').hide();
-                        $('#taskStatusMessage').show();
-                        $('#statusMessage').text('Task failed. Please try again.');
+                        $(loading).hide();
+                        $(Status_text).show();
+                        $(Status_text).text('Task failed. Please try again.');
                     } else {
-                        // Continue polling every 2 seconds if the task is still in progress
+                        // 繼續輪詢
                         setTimeout(function() {
-                            checkTaskStatus(taskId);
+                            checkTaskStatus(taskId, patientId);
                         }, 2000);
                     }
                 },
                 error: function() {
-                    $('#loading').hide();
-                    $('#taskStatusMessage').show();
-                    $('#statusMessage').text('Error checking task status. Please try again.');
+                    $(loading).hide();
+                    $(Status_text).show();
+                    $(Status_text).text('Error checking task status.');
                 }
             });
-        }
+        };
     </script>
 </body>
 </html>
