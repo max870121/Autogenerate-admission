@@ -283,18 +283,30 @@ async def task_status(task_id: str):
         raise HTTPException(status_code=404, detail="Task not found.")
     return {"task_id": task_id, "status": status}
 
-@app.get("/Admission_note/{task_id}")
+@app.get("/Admission_note/{task_id}", response_class=HTMLResponse)
 async def admission_note(request: Request, task_id: str):
     # 查詢任務的狀態
     status = task_status_dict.get(task_id)
-    print(task_status_dict)
     if not status:
         raise HTTPException(status_code=404, detail="Task not found.")
-    return HTMLResponse(content=status[1], status_code=200)
+    else:
+        html=status[1]
+        soup = BeautifulSoup(html, 'html.parser')
+        sections = []
+
+        for div in soup.find_all('div'):
+            section_id = div.get("id")
+            if section_id:
+                content = div.get_text(separator="\n", strip=True)
+                sections.append({"id": section_id, "content": content})
+        
+    return templates.TemplateResponse("admission_note.html", {"request": request, "sections": sections })
+    # return HTMLResponse(content=status[1], status_code=200)
 
 
 # Serve the HTML form from a separate template file
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
+    task_status_dict={}
     return templates.TemplateResponse("index.html", {"request": request})
 
